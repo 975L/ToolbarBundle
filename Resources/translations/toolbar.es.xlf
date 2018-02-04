@@ -35,8 +35,8 @@
                 <target>Desconectar</target>
             </trans-unit>
             <trans-unit id="9">
-                <source>label.products</source>
-                <target>Productos</target>
+                <source>label.dashboards</source>
+                <target>Tableros</target>
             </trans-unit>
             <trans-unit id="10">
                 <source>label.userfiles</source>

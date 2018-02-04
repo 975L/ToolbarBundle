@@ -23,7 +23,7 @@ class ToolbarController extends Controller
                 'tools' => $tools,
                 'product' => $product,
                 'signoutRoute' => $this->getParameter('c975_l_toolbar.signoutRoute'),
-                'usedProducts' => $this->getParameter('c975_l_toolbar.products'),
+                'dashboards' => $this->getParameter('c975_l_toolbar.dashboards'),
             ));
         }
 

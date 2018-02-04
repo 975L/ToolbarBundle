@@ -16,15 +16,15 @@
                 <span class="glyphicon glyphicon-log-out"></span></a>
         {% endif %}
     </div>
-{# Available products #}
+{# Available dashboards #}
     <div class="btn-group btn-group-md" role="group">
         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{ 'label.products'|trans }}
+            {{ 'label.dashboards'|trans }}
             <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
-            {% for usedProduct in usedProducts %}
-                <li><a href="{{ path(usedProduct ~ '_dashboard') }}" title="{{ ('label.' ~ usedProduct)|trans }}">{{ ('label.' ~ usedProduct)|trans }}</a></li>
+            {% for dashboard in dashboards %}
+                <li><a href="{{ path(dashboard ~ '_dashboard') }}" title="{{ ('label.' ~ dashboard)|trans }}">{{ ('label.' ~ dashboard)|trans }}</a></li>
             {% endfor %}
         </ul>
     </div>

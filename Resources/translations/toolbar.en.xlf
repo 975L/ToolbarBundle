@@ -35,8 +35,8 @@
                 <target>Sign out</target>
             </trans-unit>
             <trans-unit id="9">
-                <source>label.products</source>
-                <target>Products</target>
+                <source>label.dashboards</source>
+                <target>Dashboards</target>
             </trans-unit>
             <trans-unit id="10">
                 <source>label.userfiles</source>
