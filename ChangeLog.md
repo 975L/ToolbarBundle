@@ -1,5 +1,9 @@
 # Changelog
 
+v1.2.1
+------
+- Remove of mention of `dashboardRoute` in `README.md` (04/02/2018)
+
 v1.2
 ----
 - Move the list of products at he end of the toolbar (04/02/2018)
