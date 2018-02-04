@@ -1,8 +1,13 @@
 # Changelog
 
+v1.2.3
+------
+- Update `README.md` (04/02/2018)
+
 v1.2.2
 ------
 - Rename products to dashboards (04/02/2018)
+
 v1.2.1
 ------
 - Remove of mention of `dashboardRoute` in `README.md` (04/02/2018)
