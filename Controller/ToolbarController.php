@@ -22,7 +22,6 @@ class ToolbarController extends Controller
             $toolbar  = $this->renderView('@c975LToolbar/toolbar.html.twig', array(
                 'tools' => $tools,
                 'product' => $product,
-                'dashboardRoute' => $this->getParameter('c975_l_toolbar.dashboardRoute'),
                 'signoutRoute' => $this->getParameter('c975_l_toolbar.signoutRoute'),
                 'usedProducts' => $this->getParameter('c975_l_toolbar.products'),
             ));

@@ -2,8 +2,23 @@
 
 <div class="text-center">
     <div class="btn-group btn-group-md" role="group">
+{# Current product dashboard #}
+        <a href="{{ path(product ~ '_dashboard') }}" class="btn btn-success" title="{{ ('label.' ~ product)|trans }}" role="button">
+            <span class="glyphicon glyphicon-dashboard"></span>&nbsp;{{ ('label.' ~ product)|trans }}</a>
+{# Tools specified by bundle #}
+        {{ tools|raw }}
+{# Help #}
+        <a href="{{ path(product ~ '_help') }}" class="btn btn-info" title="{{ 'label.help'|trans }}" role="button">
+            <span class="glyphicon glyphicon-flag"></span></a>
+{# Signout #}
+        {% if signoutRoute != null %}
+            <a href="{{ path(signoutRoute) }}" class="btn btn-info" title="{{ 'label.signout'|trans }}" role="button">
+                <span class="glyphicon glyphicon-log-out"></span></a>
+        {% endif %}
+    </div>
 {# Available products #}
-        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="btn-group btn-group-md" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             {{ 'label.products'|trans }}
             <span class="caret"></span>
         </button>
@@ -12,20 +27,5 @@
                 <li><a href="{{ path(usedProduct ~ '_dashboard') }}" title="{{ ('label.' ~ usedProduct)|trans }}">{{ ('label.' ~ usedProduct)|trans }}</a></li>
             {% endfor %}
         </ul>
-{# Tools specified by bundle #}
-        {{ tools|raw }}
-{# Help #}
-        <a href="{{ path(product ~ '_help') }}" class="btn btn-info" title="{{ 'label.help'|trans }}" role="button">
-            <span class="glyphicon glyphicon-flag"></span></a>
-{# Main dashboard #}
-        {% if dashboardRoute != null %}
-            <a href="{{ path(dashboardRoute) }}" class="btn btn-info" title="{{ 'label.dashboard'|trans }}" role="button">
-                <span class="glyphicon glyphicon-dashboard"></span></a>
-        {% endif %}
-{# Signout #}
-        {% if signoutRoute != null %}
-            <a href="{{ path(signoutRoute) }}" class="btn btn-info" title="{{ 'label.signout'|trans }}" role="button">
-                <span class="glyphicon glyphicon-log-out"></span></a>
-        {% endif %}
     </div>
 </div>
