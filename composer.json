@@ -1,7 +1,7 @@
 {
     "name": "c975l/toolbar-bundle",
     "type": "symfony-bundle",
-    "description": "Bundle to add a common toolbar to several projects developed by 975L.com",
+    "description": "Bundle to add a common toolbar to products developed by 975L.com",
     "keywords": ["symfony", "bundle"],
     "homepage": "https://github.com/975L/ToolbarBundle",
     "license": "MIT",
@@ -18,14 +18,18 @@
         }
     ],
     "require": {
-        "php": ">=7",
-        "symfony/framework-bundle": "3.*",
-        "sensio/framework-extra-bundle": "3.*",
-        "symfony/assetic-bundle": "2.*"
+        "php": ">=5.5.9",
+        "symfony/framework-bundle": "^3",
+        "sensio/framework-extra-bundle": "^3"
     },
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": { "c975L\\ToolbarBundle\\": ""
         }
+    },
+    "support": {
+        "email": "contact@975l.com",
+        "source": "https://github.com/975L/ToolbarBundle",
+        "issues": "https://github.com/975L/ToolbarBundle/issues"
     }
 }
