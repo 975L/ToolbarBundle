@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="fr" datatype="plaintext" original="toolbar.en.xlf">
+        <body>
+            <trans-unit id="1">
+                <source>label.dashboard</source>
+                <target>Tableau de bord</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>label.display</source>
+                <target>Affichage</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>label.new</source>
+                <target>Nouveau</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>label.modify</source>
+                <target>Modifier</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>label.delete</source>
+                <target>Supprimer</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>label.help</source>
+                <target>Aide</target>
+            </trans-unit>
+            <trans-unit id="7">
+                <source>label.duplicate</source>
+                <target>Dupliquer</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>label.signout</source>
+                <target>Me déconnecter</target>
+            </trans-unit>
+            <trans-unit id="9">
+                <source>label.products</source>
+                <target>Produits</target>
+            </trans-unit>
+            <trans-unit id="10">
+                <source>label.userfiles</source>
+                <target>Tableau de bord utilisateur</target>
+            </trans-unit>
+            <trans-unit id="11">
+                <source>label.pageedit</source>
+                <target>PageEdit</target>
+            </trans-unit>
+            <trans-unit id="12">
+                <source>label.giftvoucher</source>
+                <target>Bon-Cadeau</target>
+            </trans-unit>
+            <trans-unit id="13">
+                <source>label.payment</source>
+                <target>Paiements</target>
+            </trans-unit>
+            <trans-unit id="14">
+                <source>label.events</source>
+                <target>Événements</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

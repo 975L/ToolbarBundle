@@ -7,7 +7,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace c975L\EmailBundle\DependencyInjection;
+namespace c975L\ToolbarBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -15,7 +15,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-class c975LEmailExtension extends Extension
+class c975LToolbarExtension extends Extension
 {
     /**
      * {@inheritdoc}
@@ -30,5 +30,9 @@ class c975LEmailExtension extends Extension
 
         $configuration = new Configuration();
         $processedConfig = $this->processConfiguration($configuration, $configs);
+
+        $container->setParameter('c975_l_toolbar.signoutRoute', $processedConfig['signoutRoute']);
+        $container->setParameter('c975_l_toolbar.dashboardRoute', $processedConfig['dashboardRoute']);
+        $container->setParameter('c975_l_toolbar.products', $processedConfig['products']);
     }
 }

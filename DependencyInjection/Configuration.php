@@ -21,6 +21,16 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
+                ->scalarNode('signoutRoute')
+                    ->defaultNull()
+                ->end()
+                ->scalarNode('dashboardRoute')
+                    ->defaultNull()
+                ->end()
+                ->arrayNode('products')
+                    ->prototype('scalar')->end()
+                    ->defaultValue(array())
+                ->end()
             ->end()
         ;
 
