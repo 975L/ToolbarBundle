@@ -1,5 +1,10 @@
 # Changelog
 
+v1.3
+----
+- Add a Twig function to check if a Route exists (05/02/2018)
+- Add a test to check if help Route exists (05/02/2018)
+
 v1.2.3
 ------
 - Update `README.md` (04/02/2018)

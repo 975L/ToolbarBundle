@@ -2,14 +2,16 @@
 
 <div class="text-center">
     <div class="btn-group btn-group-md" role="group">
-{# Current product dashboard #}
-        <a href="{{ path(product ~ '_dashboard') }}" class="btn btn-success" title="{{ ('label.' ~ product)|trans }}" role="button">
-            <span class="glyphicon glyphicon-dashboard"></span>&nbsp;{{ ('label.' ~ product)|trans }}</a>
+{# Current dashboard #}
+        <a href="{{ path(dashboard ~ '_dashboard') }}" class="btn btn-success" title="{{ ('label.' ~ dashboard)|trans }}" role="button">
+            <span class="glyphicon glyphicon-dashboard"></span>&nbsp;{{ ('label.' ~ dashboard)|trans }}</a>
 {# Tools specified by bundle #}
         {{ tools|raw }}
 {# Help #}
-        <a href="{{ path(product ~ '_help') }}" class="btn btn-info" title="{{ 'label.help'|trans }}" role="button">
-            <span class="glyphicon glyphicon-flag"></span></a>
+        {% if route_exists(dashboard ~ '_help') != null %}
+            <a href="{{ path(dashboard ~ '_help') }}" class="btn btn-info" title="{{ 'label.help'|trans }}" role="button">
+                <span class="glyphicon glyphicon-flag"></span></a>
+        {% endif %}
 {# Signout #}
         {% if signoutRoute != null %}
             <a href="{{ path(signoutRoute) }}" class="btn btn-info" title="{{ 'label.signout'|trans }}" role="button">

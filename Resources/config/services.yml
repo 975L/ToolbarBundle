@@ -6,3 +6,6 @@ services:
 
     c975L\ToolbarBundle\Controller\:
         resource: '../../Controller/*'
+
+    c975L\ToolbarBundle\Twig\:
+        resource: '../../Twig/*'

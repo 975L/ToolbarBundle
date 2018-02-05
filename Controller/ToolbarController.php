@@ -15,13 +15,13 @@ use Symfony\Component\HttpFoundation\Response;
 class ToolbarController extends Controller
 {
 //DISPLAY
-    public function displayAction($tools = null, $product = null)
+    public function displayAction($tools = null, $dashboard = null)
     {
         $toolbar = '';
         if ($this->getUser() !== null) {
             $toolbar  = $this->renderView('@c975LToolbar/toolbar.html.twig', array(
                 'tools' => $tools,
-                'product' => $product,
+                'dashboard' => $dashboard,
                 'signoutRoute' => $this->getParameter('c975_l_toolbar.signoutRoute'),
                 'dashboards' => $this->getParameter('c975_l_toolbar.dashboards'),
             ));
