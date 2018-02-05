@@ -1,5 +1,10 @@
 # Changelog
 
+v1.3.1
+------
+- Add of translation for c975L/EmailBundle (05/02/2018)
+- Modified label for userfiles (05/02/2018)
+
 v1.3
 ----
 - Add a Twig function to check if a Route exists (05/02/2018)

@@ -40,7 +40,7 @@
             </trans-unit>
             <trans-unit id="10">
                 <source>label.userfiles</source>
-                <target>Tablero usuario</target>
+                <target>Usuario</target>
             </trans-unit>
             <trans-unit id="11">
                 <source>label.pageedit</source>
@@ -57,6 +57,10 @@
             <trans-unit id="14">
                 <source>label.events</source>
                 <target>Eventos</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>label.email</source>
+                <target>Emails</target>
             </trans-unit>
         </body>
     </file>
