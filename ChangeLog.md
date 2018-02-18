@@ -1,5 +1,10 @@
 # Changelog
 
+v1.4.1
+------
+- Added events to toolbar dashboards available (18/02/2018)
+- Added suppression of '-' in dashboards names (18/02/2018)
+
 v1.4
 ----
 - Removed `dashboards` parameter to get the data directly from the vendor folder (17/02/2018)

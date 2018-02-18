@@ -18,10 +18,10 @@ class ToolbarController extends Controller
     public function displayAction($tools = null, $dashboard = null)
     {
         //Defines installed dashboards
-        $dashboardsAvailable = array('email', 'gift-voucher', 'pageedit', 'payment', 'shop', 'user');
+        $dashboardsAvailable = array('email', 'events', 'gift-voucher', 'pageedit', 'payment', 'shop', 'user');
         foreach ($dashboardsAvailable as $dashboardAvailable) {
             if (is_dir($this->container->getParameter('kernel.root_dir') . '/../vendor/c975l/' . $dashboardAvailable . '-bundle')) {
-                $dashboards[] = $dashboardAvailable;
+                $dashboards[] = str_replace('-', '', $dashboardAvailable);
             }
         }
 
