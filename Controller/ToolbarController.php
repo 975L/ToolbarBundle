@@ -17,13 +17,22 @@ class ToolbarController extends Controller
 //DISPLAY
     public function displayAction($tools = null, $dashboard = null)
     {
+        //Defines installed dashboards
+        $dashboardsAvailable = array('email', 'gift-voucher', 'pageedit', 'payment', 'shop', 'user');
+        foreach ($dashboardsAvailable as $dashboardAvailable) {
+            if (is_dir($this->container->getParameter('kernel.root_dir') . '/../vendor/c975l/' . $dashboardAvailable . '-bundle')) {
+                $dashboards[] = $dashboardAvailable;
+            }
+        }
+
+        //Defines toolbar
         $toolbar = '';
         if ($this->getUser() !== null) {
             $toolbar  = $this->renderView('@c975LToolbar/toolbar.html.twig', array(
                 'tools' => $tools,
                 'dashboard' => $dashboard,
                 'signoutRoute' => $this->getParameter('c975_l_toolbar.signoutRoute'),
-                'dashboards' => $this->getParameter('c975_l_toolbar.dashboards'),
+                'dashboards' => $dashboards,
             ));
         }
 

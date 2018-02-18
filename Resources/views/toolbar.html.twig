@@ -3,8 +3,10 @@
 <div class="text-center">
     <div class="btn-group btn-group-md" role="group">
 {# Current dashboard #}
-        <a href="{{ path(dashboard ~ '_dashboard') }}" class="btn btn-success" title="{{ ('label.' ~ dashboard)|trans }}" role="button">
-            <span class="glyphicon glyphicon-dashboard"></span>&nbsp;{{ ('label.' ~ dashboard)|trans }}</a>
+        {% if route_exists(dashboard ~ '_dashboard') != null %}
+            <a href="{{ path(dashboard ~ '_dashboard') }}" class="btn btn-success" title="{{ ('label.' ~ dashboard)|trans }}" role="button">
+                <span class="glyphicon glyphicon-dashboard"></span>&nbsp;{{ ('label.' ~ dashboard)|trans }}</a>
+        {% endif %}
 {# Tools specified by bundle #}
         {{ tools|raw }}
 {# Help #}
@@ -25,8 +27,10 @@
             <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
-            {% for dashboard in dashboards %}
-                <li><a href="{{ path(dashboard ~ '_dashboard') }}" title="{{ ('label.' ~ dashboard)|trans }}">{{ ('label.' ~ dashboard)|trans }}</a></li>
+            {% for dashboardAvailable in dashboards %}
+                {% if route_exists(dashboardAvailable ~ '_dashboard') != null %}
+                    <li><a href="{{ path(dashboardAvailable ~ '_dashboard') }}" title="{{ ('label.' ~ dashboardAvailable)|trans }}">{{ ('label.' ~ dashboardAvailable)|trans }}</a></li>
+                {% endif %}
             {% endfor %}
         </ul>
     </div>

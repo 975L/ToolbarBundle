@@ -32,6 +32,5 @@ class c975LToolbarExtension extends Extension
         $processedConfig = $this->processConfiguration($configuration, $configs);
 
         $container->setParameter('c975_l_toolbar.signoutRoute', $processedConfig['signoutRoute']);
-        $container->setParameter('c975_l_toolbar.dashboards', $processedConfig['dashboards']);
     }
 }

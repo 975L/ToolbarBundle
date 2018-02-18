@@ -45,8 +45,6 @@ Then, in the `app/config.yml` file of your project, define `roleNeeded` (the use
 c975_l_toolbar:
     #(Optional) Your signout Route if you want to allow sign out from Events toolbar
     signoutRoute: 'name_of_your_signout_route' #default null
-    #(Optional) The list of used dashboards (products) in order of appeareance
-    dashboards: ['pageedit', 'giftvoucher', 'userfiles']
 ```
 
 How to use

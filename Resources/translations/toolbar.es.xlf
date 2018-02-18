@@ -39,7 +39,7 @@
                 <target>Tableros</target>
             </trans-unit>
             <trans-unit id="10">
-                <source>label.userfiles</source>
+                <source>label.user</source>
                 <target>Usuario</target>
             </trans-unit>
             <trans-unit id="11">
@@ -47,7 +47,7 @@
                 <target>PageEdit</target>
             </trans-unit>
             <trans-unit id="12">
-                <source>label.giftvoucher</source>
+                <source>label.gift-voucher</source>
                 <target>Certificado Regalo</target>
             </trans-unit>
             <trans-unit id="13">
@@ -61,6 +61,14 @@
             <trans-unit id="15">
                 <source>label.email</source>
                 <target>Emails</target>
+            </trans-unit>
+            <trans-unit id="16">
+                <source>label.cancel</source>
+                <target>Cancelar</target>
+            </trans-unit>
+            <trans-unit id="17">
+                <source>label.create</source>
+                <target>Crear</target>
             </trans-unit>
         </body>
     </file>

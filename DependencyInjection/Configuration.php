@@ -24,10 +24,6 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('signoutRoute')
                     ->defaultNull()
                 ->end()
-                ->arrayNode('dashboards')
-                    ->prototype('scalar')->end()
-                    ->defaultValue(array())
-                ->end()
             ->end()
         ;
 

@@ -1,5 +1,9 @@
 # Changelog
 
+v1.4
+----
+- Removed `dashboards` parameter to get the data directly from the vendor folder (17/02/2018)
+
 v1.3.1
 ------
 - Add of translation for c975L/EmailBundle (05/02/2018)
