@@ -47,8 +47,8 @@
                 <target>PageEdit</target>
             </trans-unit>
             <trans-unit id="12">
-                <source>label.gift-voucher</source>
-                <target>Certificado Regalo</target>
+                <source>label.giftvoucher</source>
+                <target>Vale-Regalo</target>
             </trans-unit>
             <trans-unit id="13">
                 <source>label.payment</source>
