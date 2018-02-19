@@ -1,5 +1,9 @@
 # Changelog
 
+v1.4.3
+------
+- Added `label.validate` to translations (19/02/2018)
+
 v1.4.2
 ------
 - Corrected translation for Gift-Voucher dashboard (18/02/2018)

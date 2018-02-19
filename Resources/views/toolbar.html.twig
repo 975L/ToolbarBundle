@@ -7,7 +7,7 @@
             <a href="{{ path(dashboard ~ '_dashboard') }}" class="btn btn-success" title="{{ ('label.' ~ dashboard)|trans }}" role="button">
                 <span class="glyphicon glyphicon-dashboard"></span>&nbsp;{{ ('label.' ~ dashboard)|trans }}</a>
         {% endif %}
-{# Tools specified by bundle #}
+{# Tools specified by current Dashboard #}
         {{ tools|raw }}
 {# Help #}
         {% if route_exists(dashboard ~ '_help') != null %}
