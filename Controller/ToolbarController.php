@@ -17,23 +17,38 @@ class ToolbarController extends Controller
 //DISPLAY
     public function displayAction($tools = null, $dashboard = null)
     {
-        //Defines installed dashboards
-        $dashboardsAvailable = array('email', 'events', 'gift-voucher', 'pageedit', 'payment', 'shop', 'user');
-        foreach ($dashboardsAvailable as $dashboardAvailable) {
-            if (is_dir($this->container->getParameter('kernel.root_dir') . '/../vendor/c975l/' . $dashboardAvailable . '-bundle')) {
-                $dashboards[] = str_replace('-', '', $dashboardAvailable);
-            }
-        }
-
-        //Defines toolbar
-        $toolbar = '';
         if ($this->getUser() !== null) {
-            $toolbar  = $this->renderView('@c975LToolbar/toolbar.html.twig', array(
-                'tools' => $tools,
-                'dashboard' => $dashboard,
-                'signoutRoute' => $this->getParameter('c975_l_toolbar.signoutRoute'),
-                'dashboards' => $dashboards,
-            ));
+            //Defines installed dashboards
+            $dashboards = array();
+            $dashboardsAvailable = array('email', 'events', 'gift_voucher', 'page_edit', 'payment', 'shop', 'user');
+            foreach ($dashboardsAvailable as $dashboardAvailable) {
+                //Checks if the bundle is installed
+                if (is_dir($this->getParameter('kernel.root_dir') . '/../vendor/c975l/' . str_replace('_', '', $dashboardAvailable) . '-bundle')) {
+                    //Checks if roleNeeded is defined
+                    if ($this->container->hasParameter('c975_l_' . $dashboardAvailable . '.roleNeeded')) {
+                        //User has good roleNeeded for that dashboard
+                        if ($this->get('security.authorization_checker')->isGranted($this->getParameter('c975_l_' . str_replace('-', '_', $dashboardAvailable) . '.roleNeeded'))) {
+                            $dashboards[] = str_replace('_', '', $dashboardAvailable);
+                        }
+                    //No roleNeeded defined
+                    } else {
+                        $dashboards[] = str_replace('-', '', $dashboardAvailable);
+                    }
+                }
+            }
+
+            //Defines toolbar
+            $toolbar = '';
+            if ($this->getUser() !== null) {
+                $toolbar  = $this->renderView('@c975LToolbar/toolbar.html.twig', array(
+                    'tools' => $tools,
+                    'dashboard' => $dashboard,
+                    'dashboards' => $dashboards,
+                ));
+            }
+        //Not defined user
+        } else {
+            $toolbar = null;
         }
 
         return new Response($toolbar);

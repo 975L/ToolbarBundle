@@ -37,16 +37,6 @@ class AppKernel extends Kernel
 }
 ```
 
-Step 3: Configure the Bundle
-----------------------------
-Then, in the `app/config.yml` file of your project, define `roleNeeded` (the user's role needed to enable access to admin tasks)
-
-```yml
-c975_l_toolbar:
-    #(Optional) Your signout Route if you want to allow sign out from Events toolbar
-    signoutRoute: 'name_of_your_signout_route' #default null
-```
-
 How to use
 ----------
 Simply define the tools to be displayed against the context of the page in a Twig template
@@ -57,7 +47,7 @@ Simply define the tools to be displayed against the context of the page in a Twi
     {% trans_default_domain 'toolbar' %}
 
     {# Set any conditions #}
-    {% if type == 'edit' or type == 'delete' %}
+    {% if type == 'modify' or type == 'delete' %}
         <a href="{{ path('giftvoucher_display', {'number': giftVoucher.number}) }}" class="btn btn-default" title="{{ 'label.number'|trans({}, 'giftVoucher') }}" role="button">
         <span class="glyphicon glyphicon-eye-open"></span></a>
     {% endif %}
@@ -79,7 +69,7 @@ Then in your Controller call the above template and `c975L\ToolbarBundle\Control
         ));
         $toolbar = $this->forward('c975L\ToolbarBundle\Controller\ToolbarController::displayAction', array(
             'tools'  => $tools,
-            'product'  => 'giftvoucher',
+            'dashboard'  => 'giftvoucher',
         ))->getContent();
 
         return $this->render('@c975LGiftVoucher/pages/display.html.twig', array(

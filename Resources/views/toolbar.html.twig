@@ -15,10 +15,8 @@
                 <span class="glyphicon glyphicon-flag"></span></a>
         {% endif %}
 {# Signout #}
-        {% if signoutRoute != null %}
-            <a href="{{ path(signoutRoute) }}" class="btn btn-info" title="{{ 'label.signout'|trans }}" role="button">
-                <span class="glyphicon glyphicon-log-out"></span></a>
-        {% endif %}
+        <a href="{{ path('user_signout') }}" class="btn btn-info" title="{{ 'label.signout'|trans }}" role="button">
+            <span class="glyphicon glyphicon-log-out"></span></a>
     </div>
 {# Available dashboards #}
     <div class="btn-group btn-group-md" role="group">

@@ -21,9 +21,6 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->scalarNode('signoutRoute')
-                    ->defaultNull()
-                ->end()
             ->end()
         ;
 

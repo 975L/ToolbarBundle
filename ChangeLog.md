@@ -1,5 +1,10 @@
 # Changelog
 
+v1.5
+----
+- Added check against `roleNeeded` config value for each dashboard before adding it to the toolbar (20/02/2018)
+- Removed signoutRoute as managed via `c975L\UserBundle` (20/02/2018)
+
 v1.4.3
 ------
 - Added `label.validate` to translations (19/02/2018)
