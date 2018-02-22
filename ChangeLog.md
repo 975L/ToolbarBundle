@@ -1,5 +1,13 @@
 # Changelog
 
+v1.6
+----
+- Abandoned Glyphicon and replaced by fontawesome (22/02/2018)
+- Renamed Twig function name from 'route_exists' to 'toolbar_route_exists' (22/02/2018)
+- Added Twig extension to display button easily (22/02/2018)
+- Removed help form default toolbar as it was displayed even on the help page without possibilities to test current route in Twig (22/02/2018)
+- Added test to check if other dashboards are available to user, in order to not display dashboards button if not (22/02/2018)
+
 v1.5
 ----
 - Added check against `roleNeeded` config value for each dashboard before adding it to the toolbar (20/02/2018)

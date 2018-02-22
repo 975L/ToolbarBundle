@@ -74,6 +74,10 @@
                 <source>label.validate</source>
                 <target>Validate</target>
             </trans-unit>
+            <trans-unit id="19">
+                <source>label.change_password</source>
+                <target>Change password</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

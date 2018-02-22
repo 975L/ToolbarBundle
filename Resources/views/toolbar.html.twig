@@ -3,33 +3,28 @@
 <div class="text-center">
     <div class="btn-group btn-group-md" role="group">
 {# Current dashboard #}
-        {% if route_exists(dashboard ~ '_dashboard') != null %}
-            <a href="{{ path(dashboard ~ '_dashboard') }}" class="btn btn-success" title="{{ ('label.' ~ dashboard)|trans }}" role="button">
-                <span class="glyphicon glyphicon-dashboard"></span>&nbsp;{{ ('label.' ~ dashboard)|trans }}</a>
+        {% if toolbar_route_exists(dashboard ~ '_dashboard') != null %}
+            {{ toolbar_button(path(dashboard ~ '_dashboard'), 'dashboard', dashboard)|raw }}
         {% endif %}
 {# Tools specified by current Dashboard #}
         {{ tools|raw }}
-{# Help #}
-        {% if route_exists(dashboard ~ '_help') != null %}
-            <a href="{{ path(dashboard ~ '_help') }}" class="btn btn-info" title="{{ 'label.help'|trans }}" role="button">
-                <span class="glyphicon glyphicon-flag"></span></a>
-        {% endif %}
 {# Signout #}
-        <a href="{{ path('user_signout') }}" class="btn btn-info" title="{{ 'label.signout'|trans }}" role="button">
-            <span class="glyphicon glyphicon-log-out"></span></a>
+        {{ toolbar_button(path('user_signout'), 'signout')|raw }}
     </div>
 {# Available dashboards #}
-    <div class="btn-group btn-group-md" role="group">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{ 'label.dashboards'|trans }}
-            <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-            {% for dashboardAvailable in dashboards %}
-                {% if route_exists(dashboardAvailable ~ '_dashboard') != null %}
-                    <li><a href="{{ path(dashboardAvailable ~ '_dashboard') }}" title="{{ ('label.' ~ dashboardAvailable)|trans }}">{{ ('label.' ~ dashboardAvailable)|trans }}</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
+    {% if dashboards %}
+        <div class="btn-group btn-group-md" role="group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ 'label.dashboards'|trans }}
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                {% for dashboardAvailable in dashboards %}
+                    {% if toolbar_route_exists(dashboardAvailable ~ '_dashboard') != null %}
+                        <li><a href="{{ path(dashboardAvailable ~ '_dashboard') }}" title="{{ ('label.' ~ dashboardAvailable)|trans }}">{{ ('label.' ~ dashboardAvailable)|trans }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+{% endif %}
 </div>

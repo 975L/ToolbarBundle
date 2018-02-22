@@ -21,7 +21,7 @@ class ToolbarRouteExists extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFunction('route_exists', array($this, 'routeExists')),
+            new \Twig_SimpleFunction('toolbar_route_exists', array($this, 'routeExists')),
         );
     }
 

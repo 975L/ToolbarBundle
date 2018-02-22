@@ -10,11 +10,15 @@
 namespace c975L\ToolbarBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class ToolbarController extends Controller
 {
 //DISPLAY
+    /*
+     * No Route defined as it used as forwarded to
+     */
     public function displayAction($tools = null, $dashboard = null)
     {
         if ($this->getUser() !== null) {

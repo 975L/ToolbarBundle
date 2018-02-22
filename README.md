@@ -39,7 +39,7 @@ class AppKernel extends Kernel
 
 How to use
 ----------
-Simply define the tools to be displayed against the context of the page in a Twig template
+Simply define the tools to be displayed against the context of the page in a Twig template, and use the provided Twig extension to display buttons easily
 
 ```html
     {# @c975LGiftVoucher/tools.html.twig #}
@@ -48,8 +48,8 @@ Simply define the tools to be displayed against the context of the page in a Twi
 
     {# Set any conditions #}
     {% if type == 'modify' or type == 'delete' %}
-        <a href="{{ path('giftvoucher_display', {'number': giftVoucher.number}) }}" class="btn btn-default" title="{{ 'label.number'|trans({}, 'giftVoucher') }}" role="button">
-        <span class="glyphicon glyphicon-eye-open"></span></a>
+        {{ toolbar_button('toolbar_help', 'help')|raw }}
+        {# route and label, route can be '' to just display button. Check Twig extension for defined buttons #}
     {% endif %}
     {# Add any needed buttons following the same scheme #}
     {# ... #}
