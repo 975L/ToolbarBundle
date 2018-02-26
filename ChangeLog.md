@@ -1,5 +1,9 @@
 # Changelog
 
+v1.6.1
+------
+- Changed logo for current dashboard (26/02/2018)
+
 v1.6
 ----
 - Abandoned Glyphicon and replaced by fontawesome (22/02/2018)

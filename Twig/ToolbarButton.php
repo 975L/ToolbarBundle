@@ -35,7 +35,7 @@ class ToolbarButton extends \Twig_Extension
                 $style = 'warning';
                 break;
             case 'dashboard':
-                $icon = 'fa-hashtag';
+                $icon = 'fa-hand-point-right';
                 $style = 'success';
                 break;
             case 'delete':
