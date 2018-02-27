@@ -1,5 +1,9 @@
 # Changelog
 
+v1.6.2
+------
+- Added margin-bottom to toolbar (27/02/2018)
+
 v1.6.1
 ------
 - Changed logo for current dashboard (26/02/2018)
