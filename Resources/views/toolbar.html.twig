@@ -4,12 +4,12 @@
     <div class="btn-group btn-group-md" role="group">
 {# Current dashboard #}
         {% if toolbar_route_exists(dashboard ~ '_dashboard') != null %}
-            {{ toolbar_button(path(dashboard ~ '_dashboard'), 'dashboard', dashboard)|raw }}
+            {{ toolbar_button(path(dashboard ~ '_dashboard'), 'dashboard', dashboard) }}
         {% endif %}
 {# Tools specified by current Dashboard #}
         {{ tools|raw }}
 {# Signout #}
-        {{ toolbar_button(path('user_signout'), 'signout')|raw }}
+        {{ toolbar_button(path('user_signout'), 'signout') }}
     </div>
 {# Available dashboards #}
     {% if dashboards %}

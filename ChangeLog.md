@@ -1,5 +1,9 @@
 # Changelog
 
+v1.7
+----
+- Added 'is_safe' to Twig extension `ToolbarButton` to remove "|raw" on each call (01/03/2018)
+
 v1.6.2
 ------
 - Added margin-bottom to toolbar (27/02/2018)

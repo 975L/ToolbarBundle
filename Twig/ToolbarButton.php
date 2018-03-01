@@ -17,7 +17,10 @@ class ToolbarButton extends \Twig_Extension
             new \Twig_SimpleFunction(
                 'toolbar_button',
                 array($this, 'button'),
-                array('needs_environment' => true)
+                array(
+                    'needs_environment' => true,
+                    'is_safe' => array('html'),
+                )
             ),
         );
     }
