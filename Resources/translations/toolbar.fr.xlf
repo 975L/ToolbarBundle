@@ -78,6 +78,18 @@
                 <source>label.change_password</source>
                 <target>Changement de mot de passe</target>
             </trans-unit>
+            <trans-unit id="20">
+                <source>label.credits</source>
+                <target>Crédits</target>
+            </trans-unit>
+            <trans-unit id="21">
+                <source>label.purchasecredits</source>
+                <target>Crédits</target>
+            </trans-unit>
+            <trans-unit id="22">
+                <source>label.transactions</source>
+                <target>Transactions</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

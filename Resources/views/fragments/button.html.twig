@@ -11,7 +11,7 @@
 {% endif %}
 {# Defines button #}
 <a {{ href }} class="btn btn-{{ style }}" title="{{ ('label.' ~ label)|trans }}" role="button">
-    <span class="fas {{ icon }}"></span>
+    <span class="{{ icon }}"></span>
     {% if dashboard != null %}
         &nbsp;{{ ('label.' ~ dashboard)|trans }}
     {% endif %}

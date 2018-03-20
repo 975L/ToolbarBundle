@@ -30,47 +30,55 @@ class ToolbarButton extends \Twig_Extension
         //Defines icon and style
         switch ($label) {
             case 'cancel':
-                $icon = 'fa-ban';
+                $icon = 'fas fa-ban';
                 $style = 'default';
                 break;
             case 'change_password':
-                $icon = 'fa-sync-alt';
+                $icon = 'fas fa-sync-alt';
                 $style = 'warning';
                 break;
+            case 'credits':
+                $icon = 'fas fa-shopping-cart ';
+                $style = 'default';
+                break;
             case 'dashboard':
-                $icon = 'fa-hand-point-right';
+                $icon = 'fas fa-hand-point-right';
                 $style = 'success';
                 break;
             case 'delete':
-                $icon = 'fa-trash';
+                $icon = 'fas fa-trash';
                 $style = 'warning';
                 break;
             case 'display':
-                $icon = 'fa-eye';
+                $icon = 'fas fa-eye';
                 $style = 'default';
                 break;
             case 'duplicate':
-                $icon = 'fa-copy';
+                $icon = 'fas fa-copy';
                 $style = 'default';
                 break;
             case 'help':
-                $icon = 'fa-question';
+                $icon = 'fas fa-question';
                 $style = 'info';
                 break;
             case 'modify':
-                $icon = 'fa-pencil-alt';
+                $icon = 'fas fa-pencil-alt';
                 $style = 'default';
                 break;
             case 'new':
-                $icon = 'fa-plus';
+                $icon = 'fas fa-plus';
                 $style = 'default';
                 break;
             case 'signout':
-                $icon = 'fa-sign-out-alt';
+                $icon = 'fas fa-sign-out-alt';
                 $style = 'info';
                 break;
+            case 'transactions':
+                $icon = 'fas fa-exchange-alt';
+                $style = 'default';
+                break;
             case 'user':
-                $icon = 'fa-user';
+                $icon = 'fas fa-user';
                 $style = 'default';
                 break;
             default:

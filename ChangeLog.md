@@ -1,5 +1,10 @@
 # Changelog
 
+v1.7.1
+------
+- Added c975LPurchaseCredits (20/03/2018)
+- Modified `button.html.twig` to receive the full name of the icon (20/03/2018)
+
 v1.7
 ----
 - Added 'is_safe' to Twig extension `ToolbarButton` to remove "|raw" on each call (01/03/2018)
