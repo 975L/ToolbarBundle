@@ -90,6 +90,10 @@
                 <source>label.transactions</source>
                 <target>Transactions</target>
             </trans-unit>
+            <trans-unit id="23">
+                <source>label.exceptionchecker</source>
+                <target>ExceptionChecker</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

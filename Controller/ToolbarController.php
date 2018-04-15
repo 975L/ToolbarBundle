@@ -1,6 +1,6 @@
 <?php
 /*
- * (c) 2018: 975l <contact@975l.com>
+ * (c) 2018: 975L <contact@975l.com>
  * (c) 2018: Laurent Marquet <laurent.marquet@laposte.net>
  *
  * This source file is subject to the MIT license that is bundled
@@ -24,7 +24,7 @@ class ToolbarController extends Controller
         if ($this->getUser() !== null) {
             //Defines installed dashboards
             $dashboards = array();
-            $dashboardsAvailable = array('email', 'events', 'gift_voucher', 'page_edit', 'payment', 'purchase_credits', 'shop', 'user');
+            $dashboardsAvailable = array('email', 'events', 'exception_checker', 'gift_voucher', 'page_edit', 'payment', 'purchase_credits', 'shop', 'user');
             foreach ($dashboardsAvailable as $dashboardAvailable) {
                 //Checks if the bundle is installed
                 if (is_dir($this->getParameter('kernel.root_dir') . '/../vendor/c975l/' . str_replace('_', '', $dashboardAvailable) . '-bundle')) {

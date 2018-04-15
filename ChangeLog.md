@@ -1,8 +1,12 @@
 # Changelog
 
+v1.7.2
+------
+- Added c975LExceptionCheckerBundle (15/04/2018)
+
 v1.7.1
 ------
-- Added c975LPurchaseCredits (20/03/2018)
+- Added c975LPurchaseCreditsBundle (20/03/2018)
 - Modified `button.html.twig` to receive the full name of the icon (20/03/2018)
 
 v1.7
