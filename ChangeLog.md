@@ -1,5 +1,9 @@
 # Changelog
 
+v1.8.1
+------
+- Modified icon for credits to be the same as for c975LPurchaseCredits (13/05/2018)
+
 v1.8
 ----
 - Added possibility to create toolbars for anything wanted, not only for bundles developped by 975L.com :-) (13/05/2018)

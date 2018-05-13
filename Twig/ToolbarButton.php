@@ -42,7 +42,7 @@ class ToolbarButton extends \Twig_Extension
                 $style = 'btn-warning';
                 break;
             case 'credits':
-                $icon = 'fas fa-shopping-cart ';
+                $icon = 'fas fa-gem';
                 $style = 'btn-default';
                 break;
             case 'dashboard':
