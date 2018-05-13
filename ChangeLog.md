@@ -1,5 +1,10 @@
 # Changelog
 
+v1.8.2
+------
+- Added information in `README.md` about calling from controller (13/05/2018)
+- Added pdf button (13/05/2018)
+
 v1.8.1
 ------
 - Modified icon for credits to be the same as for c975LPurchaseCredits (13/05/2018)

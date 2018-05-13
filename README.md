@@ -56,3 +56,17 @@ You can also specify a css style in your stylesheet for the toolbar:
     margin-bottom: 2em;
 }
 ```
+
+If you need to call it from a controller, you can do it with the following code:
+```php
+<?php
+//...
+    $tools = $this->renderView('LOCATION_OF_YOUR_TEMPLATE_DEFINED_ABOVE', array(
+        'type' => 'YOUR_TYPE',
+        'object' => YOUR_OBJECT_IF_NEEDED,
+    ));
+    $toolbar = $this->renderView('@c975LToolbar/toolbar.html.twig', array(
+        'tools' => $tools,
+        'size' => 'YOUR_SIZE',
+    ));
+```

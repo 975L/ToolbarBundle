@@ -93,6 +93,10 @@ class ToolbarButton extends \Twig_Extension
                 $icon = 'fas fa-plus';
                 $style = 'btn-default';
                 break;
+            case 'pdf':
+                $icon = 'far fa-file-pdf';
+                $style = 'btn-default';
+                break;
             case 'signout':
                 $icon = 'fas fa-sign-out-alt';
                 $style = 'btn-info';

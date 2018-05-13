@@ -106,6 +106,10 @@
                 <source>label.abuse</source>
                 <target>Report abuse</target>
             </trans-unit>
+            <trans-unit id="27">
+                <source>label.pdf</source>
+                <target>PDF</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
