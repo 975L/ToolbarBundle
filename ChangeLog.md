@@ -1,5 +1,17 @@
 # Changelog
 
+v1.8
+----
+- Added possibility to create toolbars for anything wanted, not only for bundles developped by 975L.com :-) (13/05/2018)
+- Removed inline style for toolbar and added css class `toolbar` (13/05/2018)
+- Moved `button.html.twig` to `views` folder (13/05/2018)
+- Renamed `label` to `button` in Twig extension `ToolbarButton` (13/05/2018)
+- Added `label` in Twig extension `ToolbarButton` (so it's use is not the same as before, see line above) to allow specifying another label for button (13/05/2018)
+- Renamed `route` to `link` in Twig extension `ToolbarButton` (13/05/2018)
+- Added multiples buttons (13/05/2018)
+- Removed `Controller` as not used anymore (13/05/2018)
+- Removed `ToolbarRouteExists` as not used anymore (13/05/2018)
+
 v1.7.2
 ------
 - Added c975LExceptionCheckerBundle (15/04/2018)

@@ -4,8 +4,5 @@ services:
         autoconfigure: true
         public: true
 
-    c975L\ToolbarBundle\Controller\:
-        resource: '../../Controller/*'
-
     c975L\ToolbarBundle\Twig\:
         resource: '../../Twig/*'

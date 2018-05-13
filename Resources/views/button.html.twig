@@ -1,0 +1,27 @@
+{% trans_default_domain 'toolbar' %}
+
+{% spaceless %}
+{# Link #}
+{% if link == '' %}
+    {% set href = '' %}
+{% elseif link != 'cancel' %}
+    {% set href = 'href=' ~ link %}
+{% else %}
+    {% set href = 'href=javascript:history.back()' %}
+{% endif %}
+
+{# Title #}
+{% if label != null %}
+    {% set title = label %}
+{% else %}
+    {% set title = ('label.' ~ button)|trans %}
+{% endif %}
+
+{# Button #}
+<a {{ href }} class="btn {{ style }}" title="{{ title }}" role="button">
+    <span class="{{ icon }}"></span>
+    {% if button == 'dashboard' %}
+        &nbsp;{{ title }}
+    {% endif %}
+</a>
+{% endspaceless %}

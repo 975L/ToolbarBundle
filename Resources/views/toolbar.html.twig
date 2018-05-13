@@ -1,30 +1,9 @@
 {% trans_default_domain 'toolbar' %}
 
-<div class="text-center" style="margin-bottom:2em;">
-    <div class="btn-group btn-group-md" role="group">
-{# Current dashboard #}
-        {% if toolbar_route_exists(dashboard ~ '_dashboard') != null %}
-            {{ toolbar_button(path(dashboard ~ '_dashboard'), 'dashboard', dashboard) }}
-        {% endif %}
-{# Tools specified by current Dashboard #}
+{% spaceless %}
+<div class="text-center toolbar">
+    <div class="btn-group btn-group-{{ size }}" role="group">
         {{ tools|raw }}
-{# Signout #}
-        {{ toolbar_button(path('user_signout'), 'signout') }}
     </div>
-{# Available dashboards #}
-    {% if dashboards %}
-        <div class="btn-group btn-group-md" role="group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{ 'label.dashboards'|trans }}
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-                {% for dashboardAvailable in dashboards %}
-                    {% if toolbar_route_exists(dashboardAvailable ~ '_dashboard') != null %}
-                        <li><a href="{{ path(dashboardAvailable ~ '_dashboard') }}" title="{{ ('label.' ~ dashboardAvailable)|trans }}">{{ ('label.' ~ dashboardAvailable)|trans }}</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        </div>
-{% endif %}
 </div>
+{% endspaceless %}

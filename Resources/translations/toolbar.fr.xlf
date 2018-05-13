@@ -94,6 +94,18 @@
                 <source>label.exceptionchecker</source>
                 <target>ExceptionChecker</target>
             </trans-unit>
+            <trans-unit id="24">
+                <source>label.qrcode</source>
+                <target>Qrcodes</target>
+            </trans-unit>
+            <trans-unit id="25">
+                <source>label.info</source>
+                <target>Informations</target>
+            </trans-unit>
+            <trans-unit id="26">
+                <source>label.abuse</source>
+                <target>Rapporter un abus</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

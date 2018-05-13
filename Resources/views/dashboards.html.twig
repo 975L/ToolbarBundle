@@ -1,0 +1,17 @@
+{% trans_default_domain 'toolbar' %}
+
+{% spaceless %}
+{% if dashboards != null %}
+    <div class="btn-group btn-group-{{ size }}" role="group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ 'label.dashboards'|trans }}
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            {% for dashboard in dashboards %}
+                <li><a href="{{ path(dashboard ~ '_dashboard') }}" title="{{ ('label.' ~ dashboard)|trans }}">{{ ('label.' ~ dashboard)|trans }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+{% endspaceless %}
