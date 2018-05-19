@@ -42,7 +42,7 @@ class ToolbarDashboards extends \Twig_Extension
         $dashboards = null;
         if ($this->tokenStorage->getToken()->getUser() !== null) {
             //Defines installed dashboards
-            $dashboardsAvailable = array('email', 'events', 'exception_checker', 'gift_voucher', 'page_edit', 'payment', 'purchase_credits', 'shop', 'user');
+            $dashboardsAvailable = array('email', 'events', 'exception_checker', 'gift_voucher', 'page_edit', 'payment', 'purchase_credits', 'user');
             foreach ($dashboardsAvailable as $dashboardAvailable) {
                 //Checks if the bundle is installed
                 if (is_dir($this->container->getParameter('kernel.root_dir') . '/../vendor/c975l/' . str_replace('_', '', $dashboardAvailable) . '-bundle')) {
