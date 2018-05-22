@@ -1,5 +1,9 @@
 # Changelog
 
+v1.8.2.2
+--------
+- Removed required in composer.json (22/05/2018)
+
 v1.8.2.1
 --------
 - Removed sop from available dashboards as not available yet (19/05/2018)
