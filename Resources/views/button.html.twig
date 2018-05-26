@@ -7,7 +7,7 @@
 {% elseif link != 'cancel' %}
     {% set href = 'href=' ~ link %}
 {% else %}
-    {% set href = 'href=javascript:history.back()' %}
+    {% set href = 'href="#" onclick="javascript:history.back(); return false;"' %}
 {% endif %}
 
 {# Title #}
@@ -18,7 +18,7 @@
 {% endif %}
 
 {# Button #}
-<a {{ href }} class="btn {{ style }}" title="{{ title }}" role="button">
+<a {{ href|raw }} class="btn {{ style }}" title="{{ title }}" role="button">
     <span class="{{ icon }}"></span>
     {% if button == 'dashboard' %}
         &nbsp;{{ title }}

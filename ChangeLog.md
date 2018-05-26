@@ -1,5 +1,9 @@
 # Changelog
 
+v1.8.2.3
+--------
+- Corrected cancel button to be more in "best practices" (26/05/2018)
+
 v1.8.2.2
 --------
 - Removed required in composer.json (22/05/2018)
