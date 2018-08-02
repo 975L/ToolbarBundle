@@ -41,6 +41,11 @@ class ToolbarButton extends \Twig_Extension
                 $icon = 'fas fa-sync-alt';
                 $style = 'btn-warning';
                 break;
+            case 'create':
+            case 'new':
+                $icon = 'fas fa-plus';
+                $style = 'btn-default';
+                break;
             case 'credits':
                 $icon = 'fas fa-gem';
                 $style = 'btn-default';
@@ -87,10 +92,6 @@ class ToolbarButton extends \Twig_Extension
                 break;
             case 'qrcode':
                 $icon = 'fas fa-qrcode';
-                $style = 'btn-default';
-                break;
-            case 'new':
-                $icon = 'fas fa-plus';
                 $style = 'btn-default';
                 break;
             case 'pdf':
