@@ -110,6 +110,10 @@
                 <source>label.pdf</source>
                 <target>PDF</target>
             </trans-unit>
+            <trans-unit id="28">
+                <source>label.create</source>
+                <target>Create</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

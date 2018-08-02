@@ -1,5 +1,9 @@
 # Changelog
 
+v1.8.3.1
+--------
+- Added label.create (02/08/2018)
+
 v1.8.3
 ------
 - Added `create` case for button (02/08/2018)
