@@ -3,8 +3,8 @@ ToolbarBundle
 
 ToolbarBundle does the following:
 
-- Displays a toolbar for products developped by 975L.com,
-- include specific tools provided by products,
+- Displays a toolbar,
+- Includes generic tools,
 - Integrates with your web design.
 
 [Toolbar Bundle dedicated web page](https://975l.com/en/pages/toolbar-bundle).
