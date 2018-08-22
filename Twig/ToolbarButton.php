@@ -9,6 +9,11 @@
 
 namespace c975L\ToolbarBundle\Twig;
 
+/**
+ * Twig extension to provide the xhtml code for requested button using `toolbar_button`
+ * @author Laurent Marquet <laurent.marquet@laposte.net>
+ * @copyright 2018 975L <contact@975l.com>
+ */
 class ToolbarButton extends \Twig_Extension
 {
     public function getFunctions()
@@ -25,6 +30,10 @@ class ToolbarButton extends \Twig_Extension
         );
     }
 
+    /**
+     * Returns the xhtml code for the button
+     * @return string
+     */
     public function button(\Twig_Environment $environment, $link, $button, $label = null, $userStyle = null)
     {
         //Defines icon and style

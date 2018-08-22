@@ -1,5 +1,12 @@
 # Changelog
 
+v1.8.3.2
+--------
+- Added link to BuyMeCoffee (22/08/2018)
+- Added link to apidoc (22/08/2018)
+- Added documentation (22/08/2018)
+- Removed FQCN (22/08/2018)
+
 v1.8.3.1
 --------
 - Added label.create (02/08/2018)

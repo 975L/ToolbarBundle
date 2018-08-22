@@ -9,6 +9,11 @@
 
 namespace c975L\ToolbarBundle\Twig;
 
+/**
+ * Twig extension to provide the xhtml code for the toolbar using `toolbar_display`
+ * @author Laurent Marquet <laurent.marquet@laposte.net>
+ * @copyright 2018 975L <contact@975l.com>
+ */
 class ToolbarDisplay extends \Twig_Extension
 {
     public function getFunctions()
@@ -25,6 +30,10 @@ class ToolbarDisplay extends \Twig_Extension
         );
     }
 
+    /**
+     * Returns the xhtml code for the toolbar
+     * @return string
+     */
     public function display(\Twig_Environment $environment, $template, $type = null, $size = 'md', $object = null)
     {
         //Defines tools

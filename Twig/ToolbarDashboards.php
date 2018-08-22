@@ -9,15 +9,33 @@
 
 namespace c975L\ToolbarBundle\Twig;
 
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
+
+/**
+ * Twig extension to provide the xhtml code for available 975L dashboards using `toolbar_dashboards`
+ * @author Laurent Marquet <laurent.marquet@laposte.net>
+ * @copyright 2018 975L <contact@975l.com>
+ */
 class ToolbarDashboards extends \Twig_Extension
 {
+    /**
+     * Stores Container
+     * @var ContainerInterface
+     */
     private $container;
+
+    /**
+     * Stores TokenStorage
+     * @var TokenStorageInterface
+     */
     private $tokenStorage;
 
     public function __construct(
-        \Symfony\Component\DependencyInjection\ContainerInterface $container,
-        \Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface $tokenStorage
-        ) {
+        ContainerInterface $container,
+        TokenStorageInterface $tokenStorage
+    )
+    {
         $this->container = $container;
         $this->tokenStorage = $tokenStorage;
     }
@@ -36,6 +54,10 @@ class ToolbarDashboards extends \Twig_Extension
         );
     }
 
+    /**
+     * Returns the xhtml code for the available 975L dashboards
+     * @return string
+     */
     public function dashboards(\Twig_Environment $environment, $size)
     {
         //Checks user's rights

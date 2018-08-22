@@ -7,7 +7,9 @@ ToolbarBundle does the following:
 - Includes generic tools,
 - Integrates with your web design.
 
-[Toolbar Bundle dedicated web page](https://975l.com/en/pages/toolbar-bundle).
+[ToolbarBundle dedicated web page](https://975l.com/en/pages/toolbar-bundle).
+
+[ToolbarBundle API documentation](https://975l.com/apidoc/c975L/ToolbarBundle.html).
 
 Bundle installation
 ===================
@@ -70,3 +72,5 @@ If you need to call it from a controller, you can do it with the following code:
         'size' => 'YOUR_SIZE',
     ));
 ```
+
+**If this project help you to reduce time to develop, you can [buy me a coffee](https://www.buymeacoffee.com/LaurentMarquet) :)**
