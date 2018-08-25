@@ -12,11 +12,11 @@ namespace c975L\ToolbarBundle\Twig;
 use c975L\ToolbarBundle\Service\ToolbarServiceInterface;
 
 /**
- * Twig extension to provide the xhtml code for requested button using: `toolbar_button(path('ROUTE', { 'VARIABLE': object.PROPERTY }), 'BUTTON_NAME', 'SIZE[lg|md|sm|xs](default md)', 'USE_ANOTHER_LABEL', 'USE_ANOTHER_STYLE')
+ * Twig extension to provide the xhtml code for requested button using toolbar_button_text(path('ROUTE', { 'VARIABLE': object.PROPERTY }), 'BUTTON_NAME', 'SIZE[lg|md|sm|xs](default md)', 'ICON_DISPLAY[true|false](default true)', 'LOCATION[right|bottom|left|top]')
  * @author Laurent Marquet <laurent.marquet@laposte.net>
  * @copyright 2018 975L <contact@975l.com>
  */
-class ToolbarButton extends \Twig_Extension
+class ToolbarButtonText extends \Twig_Extension
 {
     /**
      * Stores the toolbarService
@@ -33,7 +33,7 @@ class ToolbarButton extends \Twig_Extension
     {
         return array(
             new \Twig_SimpleFunction(
-                'toolbar_button',
+                'toolbar_button_text',
                 array($this, 'button'),
                 array(
                     'needs_environment' => true,
@@ -44,27 +44,24 @@ class ToolbarButton extends \Twig_Extension
     }
 
     /**
-     * Returns the xhtml code for the button
+     * Returns the xhtml code for the button with text
      * @return string
      */
-    public function button(\Twig_Environment $environment, $link, $button, $size = 'md', $label = null, $userStyle = null)
+    public function button(\Twig_Environment $environment, $link, $button, $size = 'md', $iconDisplay = 'true', $location = 'right', $label = null, $userStyle = null)
     {
         //Defines $icon and $style
         extract($this->toolbarService->defineButton($button));
 
-        //Gets defined style
-        if ($userStyle !== null) {
-            $style = $userStyle;
-        }
-
         //Defines button
-        return $environment->render('@c975LToolbar/button.html.twig', array(
+        return $environment->render('@c975LToolbar/buttonText.html.twig', array(
             'link' => $link,
             'style' => $style,
             'size' => $size,
             'button' => $button,
             'icon' => $icon,
             'label' => $label,
+            'iconDisplay' => $iconDisplay,
+            'location' => $location,
         ));
     }
 }

@@ -1,5 +1,14 @@
 # Changelog
 
+v1.8.4
+------
+- Created ToolbarService + Interface (25/08/2018)
+- Added Twig extension ToolbarButtonText (25/08/2018)
+- Improved `README.md` (25/08/2018)
+- Added size to `toolbar_button()` [BC-Break for button defining specific label and/or style] (25/08/2018)
+- Added 'copy_code' and 'parameters' buttons (25/08/2018)
+- Updated documentation (25/08/2018)
+
 v1.8.3.2
 --------
 - Added link to BuyMeCoffee (22/08/2018)

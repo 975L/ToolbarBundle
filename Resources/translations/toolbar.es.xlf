@@ -114,6 +114,10 @@
                 <source>label.create</source>
                 <target>Crear</target>
             </trans-unit>
+            <trans-unit id="29">
+                <source>label.parameters</source>
+                <target>Parámetros</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

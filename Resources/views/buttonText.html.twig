@@ -19,9 +19,18 @@
 
 {# Button #}
 <a {{ href|raw }} class="btn btn-{{ size }} {{ style }}" title="{{ title }}" role="button">
-    <span class="{{ icon }}"></span>
-    {% if button == 'dashboard' %}
-        &nbsp;{{ title }}
+    {% if iconDisplay == 'false' %}
+        {{ title }}
+    {% else %}
+        {% if location == 'top' %}
+            {{ title }}<br /><span class="{{ icon }}"></span>
+        {% elseif location == 'left' %}
+            {{ title }}&nbsp;<span class="{{ icon }}"></span>
+        {% elseif location == 'bottom' %}
+            <span class="{{ icon }}"></span><br />{{ title }}
+        {% else %}
+            <span class="{{ icon }}"></span>&nbsp;{{ title }}
+        {% endif %}
     {% endif %}
 </a>
 {% endspaceless %}

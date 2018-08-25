@@ -10,7 +10,7 @@
 namespace c975L\ToolbarBundle\Twig;
 
 /**
- * Twig extension to provide the xhtml code for the toolbar using `toolbar_display`
+ * Twig extension to provide the xhtml code for the toolbar using `{{ toolbar_display('TOOLS_TEMPLATE', 'TYPE', 'SIZE[lg|md|sm|xs]', OBJECT_IF_NEEDED) }}`
  * @author Laurent Marquet <laurent.marquet@laposte.net>
  * @copyright 2018 975L <contact@975l.com>
  */
