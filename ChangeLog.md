@@ -1,5 +1,9 @@
 # Changelog
 
+v1.8.4.2
+--------
+- Added 'config' button (27/08/2018)
+
 v1.8.4.1
 --------
 - Removed css margin for `toolbar_button_text()` (25/08/2018)

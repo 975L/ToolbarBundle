@@ -36,6 +36,11 @@ class ToolbarService implements ToolbarServiceInterface
                 $icon = 'fas fa-sync-alt';
                 $style = 'btn-warning';
                 break;
+            case 'config':
+            case 'parameters':
+                $icon = 'fas fa-cog';
+                $style = 'btn-info';
+                break;
             case 'create':
             case 'new':
                 $icon = 'fas fa-plus';
@@ -84,10 +89,6 @@ class ToolbarService implements ToolbarServiceInterface
             case 'modify':
                 $icon = 'fas fa-pencil-alt';
                 $style = 'btn-default';
-                break;
-            case 'parameters':
-                $icon = 'fas fa-cog';
-                $style = 'btn-info';
                 break;
             case 'qrcode':
                 $icon = 'fas fa-qrcode';
