@@ -115,8 +115,12 @@
                 <target>Create</target>
             </trans-unit>
             <trans-unit id="29">
-                <source>label.parameters</source>
-                <target>Parameters</target>
+                <source>label.config</source>
+                <target>Configuration</target>
+            </trans-unit>
+            <trans-unit id="30">
+                <source>label.contactform</source>
+                <target>Contact Form</target>
             </trans-unit>
         </body>
     </file>

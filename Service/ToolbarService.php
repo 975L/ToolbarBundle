@@ -37,7 +37,6 @@ class ToolbarService implements ToolbarServiceInterface
                 $style = 'btn-warning';
                 break;
             case 'config':
-            case 'parameters':
                 $icon = 'fas fa-cog';
                 $style = 'btn-info';
                 break;

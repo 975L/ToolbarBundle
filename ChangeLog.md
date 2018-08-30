@@ -1,5 +1,10 @@
 # Changelog
 
+v1.8.5
+------
+- Removed 'parameters' data and replaced by 'config' (28/08/2018)
+- Added 'contactform' as available dashboard (30/08/2018)
+
 v1.8.4.2
 --------
 - Added 'config' button (27/08/2018)
