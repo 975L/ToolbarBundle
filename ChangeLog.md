@@ -1,5 +1,10 @@
 # Changelog
 
+v1.8.6
+------
+- Changed `ToolbarDashboards` to use c975L/ConfigBundle (31/08/2018)
+- Removed un-needed declaration in Configuration class (31/08/2018)
+
 v1.8.5
 ------
 - Removed 'parameters' data and replaced by 'config' (28/08/2018)

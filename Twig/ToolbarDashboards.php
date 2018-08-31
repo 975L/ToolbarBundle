@@ -11,6 +11,7 @@ namespace c975L\ToolbarBundle\Twig;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
+use c975L\ConfigBundle\Service\ConfigServiceInterface;
 
 /**
  * Twig extension to provide the xhtml code for available 975L dashboards using `toolbar_dashboards('SIZE[lg|md|sm|xs](default md)')`
@@ -20,22 +21,30 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
 class ToolbarDashboards extends \Twig_Extension
 {
     /**
-     * Stores Container
+     * Stores ConfigServiceInterface
+     * @var ConfigServiceInterface
+     */
+    private $configService;
+
+    /**
+     * Stores ContainerInterface
      * @var ContainerInterface
      */
     private $container;
 
     /**
-     * Stores TokenStorage
+     * Stores TokenStorageInterface
      * @var TokenStorageInterface
      */
     private $tokenStorage;
 
     public function __construct(
+        ConfigServiceInterface $configService,
         ContainerInterface $container,
         TokenStorageInterface $tokenStorage
     )
     {
+        $this->configService = $configService;
         $this->container = $container;
         $this->tokenStorage = $tokenStorage;
     }
@@ -64,20 +73,17 @@ class ToolbarDashboards extends \Twig_Extension
         $dashboards = null;
         if ($this->tokenStorage->getToken()->getUser() !== null) {
             //Defines installed dashboards
-            $dashboardsAvailable = array('contactform', 'email', 'events', 'exception_checker', 'gift_voucher', 'page_edit', 'payment', 'purchase_credits', 'user');
+            $dashboardsAvailable = array('ContactForm', 'Email', 'Events', 'ExceptionChecker', 'GiftVoucher', 'PageEdit', 'Payment', 'PurchaseCredits', 'User');
             foreach ($dashboardsAvailable as $dashboardAvailable) {
                 //Checks if the bundle is installed
-                if (is_dir($this->container->getParameter('kernel.root_dir') . '/../vendor/c975l/' . str_replace('_', '', $dashboardAvailable) . '-bundle')) {
-                    //Checks if roleNeeded is defined
-                    if ($this->container->hasParameter('c975_l_' . $dashboardAvailable . '.roleNeeded')) {
-                        //User has good roleNeeded for that dashboard
-                        if ($this->container->get('security.authorization_checker')->isGranted($this->container->getParameter('c975_l_' . str_replace('-', '_', $dashboardAvailable) . '.roleNeeded'))) {
-                            $dashboards[] = str_replace('_', '', $dashboardAvailable);
-                        }
-                    //No roleNeeded defined
-                    } else {
-                        $dashboards[] = str_replace('-', '', $dashboardAvailable);
-                    }
+                if (is_dir($this->container->getParameter('kernel.root_dir') . '/../vendor/c975l/' . strtolower($dashboardAvailable) . '-bundle') &&
+                    //Checks if roleNeeded for that dashboard is defined
+                    $this->configService->hasParameter('c975L' . $dashboardAvailable . '.roleNeeded') &&
+                    //Checks if User has good roleNeeded for that dashboard
+                    $this->container->get('security.authorization_checker')->isGranted($this->configService->getParameter('c975L' . $dashboardAvailable . '.roleNeeded'))
+                )
+                {
+                    $dashboards[] = strtolower($dashboardAvailable);
                 }
             }
         }
