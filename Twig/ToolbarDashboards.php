@@ -73,7 +73,7 @@ class ToolbarDashboards extends \Twig_Extension
         $dashboards = null;
         if ($this->tokenStorage->getToken()->getUser() !== null) {
             //Defines installed dashboards
-            $dashboardsAvailable = array('ContactForm', 'Email', 'Events', 'ExceptionChecker', 'GiftVoucher', 'PageEdit', 'Payment', 'PurchaseCredits', 'User');
+            $dashboardsAvailable = array('ContactForm', 'Email', 'Events', 'ExceptionChecker', 'GiftVoucher', 'PageEdit', 'Payment', 'PurchaseCredits', 'Site', 'User');
             foreach ($dashboardsAvailable as $dashboardAvailable) {
                 //Checks if the bundle is installed
                 if (is_dir($this->container->getParameter('kernel.root_dir') . '/../vendor/c975l/' . strtolower($dashboardAvailable) . '-bundle') &&

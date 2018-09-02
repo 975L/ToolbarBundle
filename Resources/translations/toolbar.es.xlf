@@ -122,6 +122,10 @@
                 <source>label.contactform</source>
                 <target>Formulario de contacto</target>
             </trans-unit>
+            <trans-unit id="31">
+                <source>label.site</source>
+                <target>Sitio web</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
