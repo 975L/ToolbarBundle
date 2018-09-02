@@ -1,5 +1,10 @@
 # Changelog
 
+v1.8.7
+------
+- Updated composer.json (01/09/2018)
+- Added dashboard for c975L/SiteBundle (02/09/2018)
+
 v1.8.6
 ------
 - Changed `ToolbarDashboards` to use c975L/ConfigBundle (31/08/2018)
