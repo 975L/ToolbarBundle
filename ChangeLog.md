@@ -1,5 +1,7 @@
 # Changelog
 
+v1.8.8
+------
 - Made delete button as 'danger' instead of 'warning' (03/09/2018)
 
 v1.8.7
