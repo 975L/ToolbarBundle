@@ -55,7 +55,7 @@ class ToolbarService implements ToolbarServiceInterface
                 break;
             case 'delete':
                 $icon = 'fas fa-trash';
-                $style = 'btn-warning';
+                $style = 'btn-danger';
                 break;
             case 'display':
                 $icon = 'fas fa-eye';
