@@ -1,5 +1,7 @@
 # Changelog
 
+- Made delete button as 'danger' instead of 'warning' (03/09/2018)
+
 v1.8.7
 ------
 - Updated composer.json (01/09/2018)
