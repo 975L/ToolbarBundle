@@ -24,6 +24,10 @@ class ToolbarService implements ToolbarServiceInterface
     public function defineButton(string $button)
     {
         switch ($button) {
+            case 'add_role':
+                $icon = 'fas fa-user-check';
+                $style = 'btn-info';
+                break;
             case 'abuse':
                 $icon = 'fas fa-fire';
                 $style = 'btn-danger';
@@ -56,6 +60,10 @@ class ToolbarService implements ToolbarServiceInterface
             case 'delete':
                 $icon = 'fas fa-trash';
                 $style = 'btn-danger';
+                break;
+            case 'delete_role':
+                $icon = 'fas fa-user-times';
+                $style = 'btn-info';
                 break;
             case 'display':
                 $icon = 'fas fa-eye';

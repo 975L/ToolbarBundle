@@ -1,5 +1,9 @@
 # Changelog
 
+v1.8.9
+------
+- Added `add_role` and `delete_role` buttons (28/10/2018)
+
 v1.8.8
 ------
 - Made delete button as 'danger' instead of 'warning' (03/09/2018)
