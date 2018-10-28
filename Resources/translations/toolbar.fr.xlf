@@ -126,6 +126,14 @@
                 <source>label.site</source>
                 <target>Site web</target>
             </trans-unit>
+            <trans-unit id="32">
+                <source>label.add_role</source>
+                <target>Ajout d'un rôle</target>
+            </trans-unit>
+            <trans-unit id="33">
+                <source>label.delete_role</source>
+                <target>Suppression d'un rôle</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -1,5 +1,9 @@
 # Changelog
 
+v1.8.9.1
+--------
+- Added missing labels (28/10/2018)
+
 v1.8.9
 ------
 - Added `add_role` and `delete_role` buttons (28/10/2018)
