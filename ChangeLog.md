@@ -1,5 +1,7 @@
 # Changelog
 
+- Added info to `README.md` (29/10/2018)
+
 v1.8.10
 -------
 - Added buttons (29/10/2018)
