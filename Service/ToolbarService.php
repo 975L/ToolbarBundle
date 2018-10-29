@@ -77,6 +77,11 @@ class ToolbarService implements ToolbarServiceInterface
                 $icon = 'fas fa-envelope';
                 $style = 'btn-default';
                 break;
+            case 'export_json':
+            case 'export_xml':
+                $icon = 'fas fa-file-export';
+                $style = 'btn-default';
+                break;
             case 'forward':
                 $icon = 'fas fa-forward';
                 $style = 'btn-default';
@@ -92,6 +97,10 @@ class ToolbarService implements ToolbarServiceInterface
             case 'info':
                 $icon = 'fas fa-info-circle';
                 $style = 'btn-info';
+                break;
+            case 'public_profile':
+                $icon = 'fas fa-user-circle';
+                $style = 'btn-default';
                 break;
             case 'modify':
                 $icon = 'fas fa-pencil-alt';
@@ -120,6 +129,10 @@ class ToolbarService implements ToolbarServiceInterface
             case 'user':
                 $icon = 'fas fa-user';
                 $style = 'btn-default';
+                break;
+            case 'users':
+                $icon = 'fas fa-users';
+                $style = 'btn-warning';
                 break;
             default:
                 $icon = null;

@@ -134,6 +134,26 @@
                 <source>label.delete_role</source>
                 <target>Eliminar un rol</target>
             </trans-unit>
+            <trans-unit id="34">
+                <source>label.public_profile </source>
+                <target>Perfil público</target>
+            </trans-unit>
+            <trans-unit id="35">
+                <source>label.export_xml</source>
+                <target>Exportar mis datos (XML)</target>
+            </trans-unit>
+            <trans-unit id="36">
+                <source>label.export_json</source>
+                <target>Exportar mis datos (JSON)</target>
+            </trans-unit>
+            <trans-unit id="37">
+                <source>label.manage</source>
+                <target>Administración</target>
+            </trans-unit>
+            <trans-unit id="38">
+                <source>label.users</source>
+                <target>Usuarios</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
