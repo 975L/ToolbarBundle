@@ -10,13 +10,14 @@
 namespace c975L\ToolbarBundle\Twig;
 
 use c975L\ToolbarBundle\Service\ToolbarServiceInterface;
+use Twig_Extension;
 
 /**
  * Twig extension to provide the xhtml code for requested button using toolbar_button_text(path('ROUTE', { 'VARIABLE': object.PROPERTY }), 'BUTTON_NAME', 'SIZE[lg|md|sm|xs](default md)', 'ICON_DISPLAY[true|false](default true)', 'LOCATION[right|bottom|left|top]')
  * @author Laurent Marquet <laurent.marquet@laposte.net>
  * @copyright 2018 975L <contact@975l.com>
  */
-class ToolbarButtonText extends \Twig_Extension
+class ToolbarButtonText extends Twig_Extension
 {
     /**
      * Stores the toolbarService

@@ -12,13 +12,14 @@ namespace c975L\ToolbarBundle\Twig;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use c975L\ConfigBundle\Service\ConfigServiceInterface;
+use Twig_Extension;
 
 /**
  * Twig extension to provide the xhtml code for available 975L dashboards using `toolbar_dashboards('SIZE[lg|md|sm|xs](default md)')`
  * @author Laurent Marquet <laurent.marquet@laposte.net>
  * @copyright 2018 975L <contact@975l.com>
  */
-class ToolbarDashboards extends \Twig_Extension
+class ToolbarDashboards extends Twig_Extension
 {
     /**
      * Stores ConfigServiceInterface
