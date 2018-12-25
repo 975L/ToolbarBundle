@@ -9,6 +9,7 @@
 
 namespace c975L\ToolbarBundle\Twig;
 use Twig_Extension;
+use Twig_SimpleFunction;
 
 /**
  * Twig extension to provide the xhtml code for the toolbar using `{{ toolbar_display('TOOLS_TEMPLATE', 'TYPE', 'SIZE[lg|md|sm|xs]', OBJECT_IF_NEEDED) }}`
@@ -20,7 +21,7 @@ class ToolbarDisplay extends Twig_Extension
     public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFunction(
+            new Twig_SimpleFunction(
                 'toolbar_display',
                 array($this, 'display'),
                 array(

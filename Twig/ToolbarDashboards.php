@@ -13,6 +13,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use c975L\ConfigBundle\Service\ConfigServiceInterface;
 use Twig_Extension;
+use Twig_SimpleFunction;
 
 /**
  * Twig extension to provide the xhtml code for available 975L dashboards using `toolbar_dashboards('SIZE[lg|md|sm|xs](default md)')`
@@ -53,7 +54,7 @@ class ToolbarDashboards extends Twig_Extension
     public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFunction(
+            new Twig_SimpleFunction(
                 'toolbar_dashboards',
                 array($this, 'dashboards'),
                 array(
