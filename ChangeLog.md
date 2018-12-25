@@ -1,5 +1,7 @@
 # Changelog
 
+v1.8.11
+-------
 - Added info to `README.md` (29/10/2018)
 - Added rector to composer dev part (23/12/2018)
 - Modified required versions in composer (23/12/2018)
