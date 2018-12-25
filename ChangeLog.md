@@ -1,5 +1,9 @@
 # Changelog
 
+v1.8.13
+-------
+- Modified required versions in `composer.json` (25/12/2018)
+
 v1.8.12
 -------
 - Added missing use (25/12/2018)
