@@ -10,6 +10,7 @@
 namespace c975L\ToolbarBundle\Twig;
 
 use c975L\ToolbarBundle\Service\ToolbarServiceInterface;
+use Twig_SimpleFunction;
 
 /**
  * Twig extension to provide the xhtml code for requested button using toolbar_button_text(path('ROUTE', { 'VARIABLE': object.PROPERTY }), 'BUTTON_NAME', 'SIZE[lg|md|sm|xs](default md)', 'ICON_DISPLAY[true|false](default true)', 'LOCATION[right|bottom|left|top]')
@@ -32,7 +33,7 @@ class ToolbarButtonText extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFunction(
+            new Twig_SimpleFunction(
                 'toolbar_button_text',
                 array($this, 'button'),
                 array(

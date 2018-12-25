@@ -1,0 +1,19 @@
+imports:
+    - { resource: "mysql_to_mysqli.yml" }
+
+services:
+    Rector\Php\Rector\FunctionLike\Php4ConstructorRector: ~
+    Rector\Php\Rector\Ternary\TernaryToNullCoalescingRector: ~
+    Rector\Php\Rector\FuncCall\RandomFunctionRector: ~
+    Rector\Php\Rector\FunctionLike\ExceptionHandlerTypehintRector: ~
+    Rector\Php\Rector\FuncCall\MultiDirnameRector: ~
+    Rector\Php\Rector\List_\ListSplitStringRector: ~
+    Rector\Php\Rector\List_\EmptyListRector: ~
+
+    # be careful, run this just once, since it can keep swapping order back and forth
+    Rector\Php\Rector\List_\ListSwapArrayOrderRector: ~
+
+    Rector\Php\Rector\FuncCall\CallUserMethodRector : ~
+    Rector\Php\Rector\FuncCall\EregToPregMatchRector: ~
+    Rector\Php\Rector\Switch_\ReduceMultipleDefaultSwitchRector: ~
+    Rector\Php\Rector\Ternary\TernaryToSpaceshipRector: ~

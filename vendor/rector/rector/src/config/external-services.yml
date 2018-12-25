@@ -1,0 +1,42 @@
+services:
+    _defaults:
+        public: true
+        autowire: true
+
+    # PhpParser - Parser
+    PhpParser\Parser:
+        factory: ['@Rector\PhpParser\Parser\ParserFactory', 'create']
+    PhpParser\Lexer:
+        factory: ['@Rector\PhpParser\Parser\LexerFactory', 'create']
+
+    PhpParser\ParserFactory: ~
+    PhpParser\BuilderFactory: ~
+    PhpParser\NodeVisitor\CloningVisitor:
+
+    PhpParser\NodeFinder: ~
+
+    # value resolver
+    PhpParser\ConstExprEvaluator:
+        factory: ['@Rector\PhpParser\Node\ConstExprEvaluatorFactory', 'create']
+
+    Symfony\Component\Filesystem\Filesystem: ~
+
+    # Symfony\Console
+    Symfony\Component\Console\Style\SymfonyStyle:
+        factory: ['@Rector\Console\Style\SymfonyStyleFactory', 'create']
+
+    Symplify\PackageBuilder\FileSystem\FileSystem: ~
+    Symplify\PackageBuilder\FileSystem\FinderSanitizer: ~
+
+    Symplify\PackageBuilder\Parameter\ParameterProvider: ~
+    Symplify\PackageBuilder\Reflection\PrivatesCaller: ~
+
+    # see https://github.com/symplify/packagebuilder#prevent-parameter-typos
+    Symplify\PackageBuilder\EventSubscriber\ParameterTypoProofreaderEventSubscriber: ~
+    Symplify\PackageBuilder\Parameter\ParameterTypoProofreader:
+        $correctToTypos:
+            exclude_paths:
+                - '#(ex(c)?lude|ignore)((d)?_(path(s)?|dir(s)?|file(s)?))?#'
+            autoload_paths:
+                # https://regex101.com/r/aXEZYk/1
+                - '#(autoload|include|bootstrap)((ed)?_(path(s)?|dir(s)?|file(s)?))?#'

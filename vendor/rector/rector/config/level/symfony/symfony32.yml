@@ -1,0 +1,7 @@
+services:
+    # dependency-injection
+    Rector\Rector\Argument\ArgumentAdderRector:
+        Symfony\Component\DependencyInjection\ContainerBuilder:
+            addCompilerPass:
+                2:
+                    priority: 0

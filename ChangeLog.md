@@ -1,5 +1,9 @@
 # Changelog
 
+v1.8.11
+-------
+- Added missing use (25/12/2018)
+
 v1.8.10
 -------
 - Added buttons (29/10/2018)

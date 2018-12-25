@@ -1,0 +1,16 @@
+services:
+    _defaults:
+        public: true
+        autowire: true
+
+    Rector\:
+        resource: '../'
+        exclude: '../{Node/Attribute.php,Rector/**/*Rector.php,Reporting/FileDiff.php,Testing,RectorDefinition,PhpParser/Node/*Info.php,Exception/*,DependencyInjection/CompilerPass/*,DependencyInjection/Loader/*,Application/Error.php}'
+
+    # extra services
+    Rector\Symfony\Rector\Form\Helper\FormTypeStringToTypeProvider: ~
+
+    Symfony\Component\Console\Application:
+        alias: 'Rector\Console\Application'
+
+    Symfony\Component\Console\Descriptor\TextDescriptor: ~
