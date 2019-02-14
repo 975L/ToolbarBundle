@@ -1,5 +1,9 @@
 # Changelog
 
+v1.8.13.1
+---------
+- Modified Dependencyinjection rootNode to be not empty (13/02/2019)
+
 v1.8.13
 -------
 - Modified required versions in `composer.json` (25/12/2018)
