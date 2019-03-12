@@ -10,15 +10,16 @@
 namespace c975L\ToolbarBundle\Twig;
 
 use c975L\ToolbarBundle\Service\ToolbarServiceInterface;
-use Twig_Extension;
-use Twig_SimpleFunction;
+use Twig\Environment;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
 /**
  * Twig extension to provide the xhtml code for requested button using: `toolbar_button(path('ROUTE', { 'VARIABLE': object.PROPERTY }), 'BUTTON_NAME', 'SIZE[lg|md|sm|xs](default md)', 'USE_ANOTHER_LABEL', 'USE_ANOTHER_STYLE')
  * @author Laurent Marquet <laurent.marquet@laposte.net>
  * @copyright 2018 975L <contact@975l.com>
  */
-class ToolbarButton extends Twig_Extension
+class ToolbarButton extends AbstractExtension
 {
     /**
      * Stores the toolbarService
@@ -34,7 +35,7 @@ class ToolbarButton extends Twig_Extension
     public function getFunctions()
     {
         return array(
-            new Twig_SimpleFunction(
+            new TwigFunction(
                 'toolbar_button',
                 array($this, 'button'),
                 array(
@@ -49,12 +50,13 @@ class ToolbarButton extends Twig_Extension
      * Returns the xhtml code for the button
      * @return string
      */
-    public function button(\Twig_Environment $environment, $link, $button, $size = 'md', $label = null, $userStyle = null)
+    public function button(Environment $environment, $link, $button, $size = 'md', $label = null, $userStyle = null)
     {
         //Defines $icon and $style
         extract($this->toolbarService->defineButton($button));
 
         //Gets defined style
+        $style = null;
         if ($userStyle !== null) {
             $style = $userStyle;
         }

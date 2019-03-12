@@ -1,5 +1,11 @@
 # Changelog
 
+v1.8.14
+-------
+- Made use of Twig namespace (11/03/2019)
+- Added possibility of null style (11/03/2019)
+- Added "c975l/config-bundle" as a dependency (11/03/2019)
+
 v1.8.13.1
 ---------
 - Modified Dependencyinjection rootNode to be not empty (13/02/2019)

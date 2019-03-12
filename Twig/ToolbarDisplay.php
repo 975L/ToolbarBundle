@@ -8,20 +8,21 @@
  */
 
 namespace c975L\ToolbarBundle\Twig;
-use Twig_Extension;
-use Twig_SimpleFunction;
+use Twig\Environment;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
 /**
  * Twig extension to provide the xhtml code for the toolbar using `{{ toolbar_display('TOOLS_TEMPLATE', 'TYPE', 'SIZE[lg|md|sm|xs]', OBJECT_IF_NEEDED) }}`
  * @author Laurent Marquet <laurent.marquet@laposte.net>
  * @copyright 2018 975L <contact@975l.com>
  */
-class ToolbarDisplay extends Twig_Extension
+class ToolbarDisplay extends AbstractExtension
 {
     public function getFunctions()
     {
         return array(
-            new Twig_SimpleFunction(
+            new TwigFunction(
                 'toolbar_display',
                 array($this, 'display'),
                 array(
@@ -36,7 +37,7 @@ class ToolbarDisplay extends Twig_Extension
      * Returns the xhtml code for the toolbar
      * @return string
      */
-    public function display(\Twig_Environment $environment, $template, $type = null, $size = 'md', $object = null)
+    public function display(Environment $environment, $template, $type = null, $size = 'md', $object = null)
     {
         //Defines tools
         $tools = $environment->render($template, array(

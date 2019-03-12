@@ -12,15 +12,16 @@ namespace c975L\ToolbarBundle\Twig;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use c975L\ConfigBundle\Service\ConfigServiceInterface;
-use Twig_Extension;
-use Twig_SimpleFunction;
+use Twig\Environment;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
 /**
  * Twig extension to provide the xhtml code for available 975L dashboards using `toolbar_dashboards('SIZE[lg|md|sm|xs](default md)')`
  * @author Laurent Marquet <laurent.marquet@laposte.net>
  * @copyright 2018 975L <contact@975l.com>
  */
-class ToolbarDashboards extends Twig_Extension
+class ToolbarDashboards extends AbstractExtension
 {
     /**
      * Stores ConfigServiceInterface
@@ -54,7 +55,7 @@ class ToolbarDashboards extends Twig_Extension
     public function getFunctions()
     {
         return array(
-            new Twig_SimpleFunction(
+            new TwigFunction(
                 'toolbar_dashboards',
                 array($this, 'dashboards'),
                 array(
@@ -69,7 +70,7 @@ class ToolbarDashboards extends Twig_Extension
      * Returns the xhtml code for the available 975L dashboards
      * @return string
      */
-    public function dashboards(\Twig_Environment $environment, $size)
+    public function dashboards(Environment $environment, $size)
     {
         //Checks user's rights
         $dashboards = null;
