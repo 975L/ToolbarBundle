@@ -1,5 +1,9 @@
 # Changelog
 
+v1.8.14.1
+---------
+- Corrected button style that was not takien into account (21/03/2019)
+
 v1.8.14
 -------
 - Made use of Twig namespace (11/03/2019)

@@ -56,8 +56,7 @@ class ToolbarButton extends AbstractExtension
         extract($this->toolbarService->defineButton($button));
 
         //Gets defined style
-        $style = null;
-        if ($userStyle !== null) {
+        if (null !== $userStyle) {
             $style = $userStyle;
         }
 
