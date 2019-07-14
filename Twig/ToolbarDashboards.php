@@ -79,7 +79,7 @@ class ToolbarDashboards extends AbstractExtension
             $dashboardsAvailable = array('ContactForm', 'Email', 'Events', 'ExceptionChecker', 'GiftVoucher', 'PageEdit', 'Payment', 'PurchaseCredits', 'Site', 'User');
             foreach ($dashboardsAvailable as $dashboardAvailable) {
                 //Checks if the bundle is installed
-                if (is_dir($this->container->getParameter('kernel.root_dir') . '/../vendor/c975l/' . strtolower($dashboardAvailable) . '-bundle') &&
+                if (is_dir($this->configService->getContainerParameter('kernel.root_dir') . '/../vendor/c975l/' . strtolower($dashboardAvailable) . '-bundle') &&
                     //Checks if roleNeeded for that dashboard is defined
                     $this->configService->hasParameter('c975L' . $dashboardAvailable . '.roleNeeded') &&
                     //Checks if User has good roleNeeded for that dashboard

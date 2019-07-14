@@ -55,7 +55,7 @@ Create button with text - `toolbar_button_text()`
 You can create a button with text in a Twig template by calling the following code (data between [] are optional):
 
 ```twig
-{{ toolbar_button_text(path('ROUTE', { 'VARIABLE': object.PROPERTY }), 'BUTTON_NAME', 'SIZE[lg|md|sm|xs](default md)', 'ICON_DISPLAY[true|false](default true)', 'LOCATION[right|bottom|left|top]', LABEL[your own label]) }}
+{{ toolbar_button_text(path('ROUTE', { 'VARIABLE': object.PROPERTY }), 'BUTTON_NAME', 'SIZE[lg|md|sm|xs](default md)', 'ICON_DISPLAY[true|false](default true)', 'LOCATION[right|bottom|left|top]', 'USE_ANOTHER_LABEL', 'USE_ANOTHER_STYLE') }}
 ````
 
 Create a toolbar - `toolbar_display`
@@ -64,13 +64,13 @@ To create a toolbar, you need to create a template where the tools are defined. 
 
 ```twig
     {# You can add some test and use the object sent #}
-    {% if type == 'YOUR_TYPE' %}
+    {% if type === 'YOUR_TYPE' %}
         {# You can pass an object and use it there, with the name 'object' #}
         {{ toolbar_button(path('ROUTE', { 'VARIABLE': object.PROPERTY }), 'BUTTON_NAME', 'SIZE[lg|md|sm|xs](default md)', 'USE_ANOTHER_LABEL', 'USE_ANOTHER_STYLE') }}
         {{ toolbar_button_text(path('ROUTE', { 'VARIABLE': object.PROPERTY }), 'BUTTON_NAME', 'SIZE[lg|md|sm|xs](default md)', 'ICON_DISPLAY[true|false](default true)', 'LOCATION[right|bottom|left|top]') }}
     {% endif %}
 ```
-Then in your templates simply call the Twig extension `{{ toolbar_display('TOOLS_TEMPLATE', 'TYPE', 'SIZE[lg|md|sm|xs]', OBJECT_IF_NEEDED) }}`.
+Then in your templates simply call the Twig extension `{{ toolbar_display('TOOLS_TEMPLATE', 'TYPE', 'SIZE[lg|md|sm|xs]', OBJECT_IF_NEEDED, ALIGNMENT[left|center|right](default center)) }}`.
 
 You can also specify a css style in your stylesheet for the toolbar:
 ```css

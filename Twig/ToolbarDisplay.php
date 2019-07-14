@@ -37,7 +37,7 @@ class ToolbarDisplay extends AbstractExtension
      * Returns the xhtml code for the toolbar
      * @return string
      */
-    public function display(Environment $environment, $template, $type = null, $size = 'md', $object = null)
+    public function display(Environment $environment, $template, $type = null, $size = 'md', $object = null, $alignment = 'center')
     {
         //Defines tools
         $tools = $environment->render($template, array(
@@ -47,6 +47,7 @@ class ToolbarDisplay extends AbstractExtension
 
         //Defines toolbar
         return $environment->render('@c975LToolbar/toolbar.html.twig', array(
+                'alignment' => $alignment,
                 'tools' => $tools,
                 'size' => $size,
             ));

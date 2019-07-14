@@ -55,6 +55,11 @@ class ToolbarButtonText extends AbstractExtension
         //Defines $icon and $style
         extract($this->toolbarService->defineButton($button));
 
+        //Gets defined style
+        if (null !== $userStyle) {
+            $style = $userStyle;
+        }
+
         //Defines button
         return $environment->render('@c975LToolbar/buttonText.html.twig', array(
             'link' => $link,

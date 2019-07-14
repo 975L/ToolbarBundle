@@ -1,5 +1,10 @@
 # Changelog
 
+v1.8.15
+-------
+- Added possibility to change style with button text (14/07/2019)
+- Added possibility to change the alignment for a toolbar (14/07/2019)
+
 v1.8.14.2
 ---------
 - Changed Github's author reference url (08/04/2019)
