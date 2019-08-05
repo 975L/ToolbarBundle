@@ -1,5 +1,9 @@
 # Changelog
 
+v1.9
+----
+- Made use of apply spaceless (05/08/2019)
+
 v1.8.16
 -------
 - Added renew button (05/08/2019)
