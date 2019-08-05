@@ -1,5 +1,9 @@
 # Changelog
 
+v1.8.16
+-------
+- Added renew button (05/08/2019)
+
 V1.8.15.1
 ---------
 - Added default value for toolbar alignment (05/08/2019)

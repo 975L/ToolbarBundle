@@ -114,6 +114,10 @@ class ToolbarService implements ToolbarServiceInterface
                 $icon = 'far fa-file-pdf';
                 $style = 'btn-default';
                 break;
+            case 'renew':
+                $icon = 'fas fa-sync-alt';
+                $style = 'btn-default';
+                break;
             case 'signout':
                 $icon = 'fas fa-sign-out-alt';
                 $style = 'btn-info';

@@ -154,6 +154,10 @@
                 <source>label.users</source>
                 <target>Utilisateurs</target>
             </trans-unit>
+            <trans-unit id="39">
+                <source>label.renew</source>
+                <target>Renew</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
