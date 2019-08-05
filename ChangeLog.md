@@ -1,5 +1,10 @@
 # Changelog
 
+V1.8.15.1
+---------
+- Added default value for toolbar alignment (05/08/2019)
+- Updated README.md (05/08/2019)
+
 v1.8.15
 -------
 - Added possibility to change style with button text (14/07/2019)

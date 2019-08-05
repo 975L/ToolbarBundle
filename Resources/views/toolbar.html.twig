@@ -1,5 +1,12 @@
 {% trans_default_domain 'toolbar' %}
 
+{% if alignment is not defined %}
+    {% set alignment = 'center' %}
+{% endif %}
+{% if size is not defined %}
+    {% set size = 'md' %}
+{% endif %}
+
 {% spaceless %}
 <div class="text-{{ alignment }} toolbar">
     <div class="btn-group btn-group-{{ size }}" role="group">

@@ -94,6 +94,7 @@ If you need to call it from a controller, you can do it with the following code:
     $toolbar = $this->renderView('@c975LToolbar/toolbar.html.twig', array(
         'tools' => $tools,
         'size' => 'YOUR_SIZE',
+        'alignment' => 'YOUR_ALIGNMENT',
     ));
 ```
 
