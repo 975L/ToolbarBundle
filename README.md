@@ -7,6 +7,8 @@ ToolbarBundle does the following:
 - Includes generic tools,
 - Integrates with your web design.
 
+This Bundle relies on the use of [Bootstrap](http://getbootstrap.com/).
+
 [ToolbarBundle dedicated web page](https://975l.com/en/pages/toolbar-bundle).
 
 [ToolbarBundle API documentation](https://975l.com/apidoc/c975L/ToolbarBundle.html).
@@ -70,7 +72,7 @@ To create a toolbar, you need to create a template where the tools are defined. 
         {{ toolbar_button_text(path('ROUTE', { 'VARIABLE': object.PROPERTY }), 'BUTTON_NAME', 'SIZE[lg|md|sm|xs](default md)', 'ICON_DISPLAY[true|false](default true)', 'LOCATION[right|bottom|left|top]') }}
     {% endif %}
 ```
-Then in your templates simply call the Twig extension `{{ toolbar_display('TOOLS_TEMPLATE', 'TYPE', 'SIZE[lg|md|sm|xs]', OBJECT_IF_NEEDED, ALIGNMENT[left|center|right](default center)) }}`.
+Then in your templates simply call the Twig extension `{{ toolbar_display('TOOLS_TEMPLATE', 'TYPE', 'SIZE[lg|md|sm|xs]', OBJECT_IF_NEEDED, 'ALIGNMENT[left|center|right](default center)') }}`.
 
 You can also specify a css style in your stylesheet for the toolbar:
 ```css

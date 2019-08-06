@@ -47,9 +47,9 @@ class ToolbarDisplay extends AbstractExtension
 
         //Defines toolbar
         return $environment->render('@c975LToolbar/toolbar.html.twig', array(
-                'alignment' => $alignment,
-                'tools' => $tools,
-                'size' => $size,
-            ));
+            'alignment' => $alignment,
+            'tools' => $tools,
+            'size' => $size,
+        ));
     }
 }
