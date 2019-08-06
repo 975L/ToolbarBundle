@@ -7,7 +7,7 @@ ToolbarBundle does the following:
 - Includes generic tools,
 - Integrates with your web design.
 
-This Bundle relies on the use of [Bootstrap](http://getbootstrap.com/).
+This Bundle relies on the use of [Bootstrap](http://getbootstrap.com/) and [Fontawesome](https://fontawesome.com).
 
 [ToolbarBundle dedicated web page](https://975l.com/en/pages/toolbar-bundle).
 
@@ -42,7 +42,10 @@ class AppKernel extends Kernel
 ```
 
 How to use
-----------
+==========
+
+ToolbarBundle use [Fontawesome](https://fontawesome.com) for icons so **you have to load it from your web page**. You may use [c975L/IncludeLibraryBundle](https://github.com/975L/IncludeLibraryBundle) that will allow you to simply add `{{ inc_lib('fontawesome', 'css') }}` in your layout.html.twig, but if you use [c975L/SiteBundle](https://github.com/975L/SiteBundle) it's already there in `stylesheets` section :).
+
 
 Create button - `toolbar_button()`
 ----------------------------------
