@@ -1,5 +1,9 @@
 # Changelog
 
+v1.9.2
+------
+- Added ShareButtons as available dashboard (07/08/2019)
+
 v1.9.1.1
 --------
 - Re-updated README.md (06/08/2019)

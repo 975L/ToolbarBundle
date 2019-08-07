@@ -76,7 +76,7 @@ class ToolbarDashboards extends AbstractExtension
         $dashboards = null;
         if ($this->tokenStorage->getToken()->getUser() !== null) {
             //Defines installed dashboards
-            $dashboardsAvailable = array('ContactForm', 'Email', 'Events', 'ExceptionChecker', 'GiftVoucher', 'PageEdit', 'Payment', 'PurchaseCredits', 'Site', 'User');
+            $dashboardsAvailable = array('ContactForm', 'Email', 'Events', 'ExceptionChecker', 'GiftVoucher', 'PageEdit', 'Payment', 'PurchaseCredits', 'Site', 'ShareButtons', 'User');
             foreach ($dashboardsAvailable as $dashboardAvailable) {
                 //Checks if the bundle is installed
                 if (is_dir($this->configService->getContainerParameter('kernel.root_dir') . '/../vendor/c975l/' . strtolower($dashboardAvailable) . '-bundle') &&

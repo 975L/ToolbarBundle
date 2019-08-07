@@ -17,7 +17,7 @@ namespace c975L\ToolbarBundle\Service;
 interface ToolbarServiceInterface
 {
     /**
-     * Defines the icon and style for a define button
+     * Defines the icon and style for a defined button
      * @return array
      */
     public function defineButton(string $button);
