@@ -50,7 +50,7 @@ class ToolbarButton extends AbstractExtension
      * Returns the xhtml code for the button
      * @return string
      */
-    public function button(Environment $environment, $link, $button, $size = 'md', $label = null, $userStyle = null)
+    public function button(Environment $environment, $link, $button, $size = null, $label = null, $userStyle = null, $color = null)
     {
         //Defines $icon and $style
         extract($this->toolbarService->defineButton($button));
@@ -64,7 +64,8 @@ class ToolbarButton extends AbstractExtension
         return $environment->render('@c975LToolbar/button.html.twig', array(
             'link' => $link,
             'style' => $style,
-            'size' => $size,
+            'color' => $color,
+            'size' => null === $size ? 'md' : $size,
             'button' => $button,
             'icon' => $icon,
             'label' => $label,

@@ -1,5 +1,12 @@
 # Changelog
 
+v1.10
+-----
+- Added color variable for button and button_text to colorize icon and text (11/09/2019)
+- Added "" for href link (11/09/2019)
+- Added buttons: comment, home, share, signin, spam, validate (11/09/2019)
+- Modified icon for renew (11/09/2019)
+
 v1.9.2
 ------
 - Added ShareButtons as available dashboard (07/08/2019)

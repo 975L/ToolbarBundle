@@ -5,7 +5,7 @@
 {% if link == '' %}
     {% set href = '' %}
 {% elseif link != 'cancel' %}
-    {% set href = 'href=' ~ link %}
+    {% set href = 'href="' ~ link  ~ '"' %}
 {% else %}
     {% set href = 'href="#" onclick="javascript:history.back(); return false;"' %}
 {% endif %}
@@ -18,8 +18,8 @@
 {% endif %}
 
 {# Button #}
-<a {{ href|raw }} class="btn btn-{{ size }} {{ style }}" title="{{ title }}" role="button">
-    <span class="{{ icon }}"></span>
+<a {{ href|raw }} class="btn btn-{{ size }} {{ style }} {{ color }}" title="{{ title }}" role="button">
+    <span class="{{ icon }} {{ color }}"></span>
     {% if button == 'dashboard' %}
         &nbsp;{{ title }}
     {% endif %}

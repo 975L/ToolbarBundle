@@ -18,18 +18,18 @@
 {% endif %}
 
 {# Button #}
-<a {{ href|raw }} class="btn btn-{{ size }} {{ style }}" style="margin: 0;" title="{{ title }}" role="button">
+<a {{ href|raw }} class="btn btn-{{ size }} {{ style }} {{ color }}" style="margin: 0;" title="{{ title }}" role="button">
     {% if iconDisplay == 'false' %}
         {{ title }}
     {% else %}
         {% if location == 'top' %}
-            {{ title }}<br /><span class="{{ icon }}"></span>
+            <span class="{{ color }}">{{ title }}</span><br /><span class="{{ icon }} {{ color }}"></span>
         {% elseif location == 'left' %}
-            {{ title }}&nbsp;<span class="{{ icon }}"></span>
+            <span class="{{ color }}">{{ title }}</span>&nbsp;<span class="{{ icon }} {{ color }}"></span>
         {% elseif location == 'bottom' %}
-            <span class="{{ icon }}"></span><br />{{ title }}
+            <span class="{{ icon }} {{ color }}"></span><br /><span class="{{ color }}">{{ title }}</span>
         {% else %}
-            <span class="{{ icon }}"></span>&nbsp;{{ title }}
+            <span class="{{ icon }} {{ color }}"></span>&nbsp;<span class="{{ color }}">{{ title }}</span>
         {% endif %}
     {% endif %}
 </a>

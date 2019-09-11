@@ -44,6 +44,10 @@ class ToolbarService implements ToolbarServiceInterface
                 $icon = 'fas fa-cog';
                 $style = 'btn-info';
                 break;
+            case 'comment':
+                $icon = 'fas fa-comment';
+                $style = 'btn-default';
+                break;
             case 'create':
             case 'new':
                 $icon = 'fas fa-plus';
@@ -86,6 +90,10 @@ class ToolbarService implements ToolbarServiceInterface
                 $icon = 'fas fa-forward';
                 $style = 'btn-default';
                 break;
+            case 'home':
+                $icon = 'fas fa-home';
+                $style = 'btn-default';
+                break;
             case 'heart':
                 $icon = 'fas fa-heart';
                 $style = 'btn-default';
@@ -115,8 +123,16 @@ class ToolbarService implements ToolbarServiceInterface
                 $style = 'btn-default';
                 break;
             case 'renew':
-                $icon = 'fas fa-sync-alt';
+                $icon = 'fas fa-redo-alt';
                 $style = 'btn-default';
+                break;
+            case 'share':
+                $icon = 'fas fa-share';
+                $style = 'btn-default';
+                break;
+            case 'signin':
+                $icon = 'fas fa-sign-in-alt';
+                $style = 'btn-info';
                 break;
             case 'signout':
                 $icon = 'fas fa-sign-out-alt';
@@ -124,6 +140,10 @@ class ToolbarService implements ToolbarServiceInterface
                 break;
             case 'send':
                 $icon = 'fas fa-paper-plane';
+                $style = 'btn-default';
+                break;
+            case 'spam':
+                $icon = 'fas fa-fire';
                 $style = 'btn-default';
                 break;
             case 'transactions':
@@ -137,6 +157,10 @@ class ToolbarService implements ToolbarServiceInterface
             case 'users':
                 $icon = 'fas fa-users';
                 $style = 'btn-warning';
+                break;
+            case 'validate':
+                $icon = 'fas fa-star';
+                $style = 'btn-default';
                 break;
             default:
                 $icon = null;

@@ -52,7 +52,7 @@ Create button - `toolbar_button()`
 You can create a button in a Twig template by calling the following code:
 
 ```twig
-{{ toolbar_button(path('ROUTE', { 'VARIABLE': object.PROPERTY }), 'BUTTON_NAME', 'SIZE[lg|md|sm|xs](default md)', 'USE_ANOTHER_LABEL', 'USE_ANOTHER_STYLE') }}
+{{ toolbar_button(path('ROUTE', { 'VARIABLE': object.PROPERTY }), 'BUTTON_NAME', 'SIZE[lg|md|sm|xs](default md)', 'USE_ANOTHER_LABEL', 'USE_ANOTHER_STYLE', 'COLOR') }}
 ````
 
 Create button with text - `toolbar_button_text()`
@@ -60,7 +60,7 @@ Create button with text - `toolbar_button_text()`
 You can create a button with text in a Twig template by calling the following code (data between [] are optional):
 
 ```twig
-{{ toolbar_button_text(path('ROUTE', { 'VARIABLE': object.PROPERTY }), 'BUTTON_NAME', 'SIZE[lg|md|sm|xs](default md)', 'ICON_DISPLAY[true|false](default true)', 'LOCATION[right|bottom|left|top]', 'USE_ANOTHER_LABEL', 'USE_ANOTHER_STYLE') }}
+{{ toolbar_button_text(path('ROUTE', { 'VARIABLE': object.PROPERTY }), 'BUTTON_NAME', 'SIZE[lg|md|sm|xs](default md)', 'ICON_DISPLAY[true|false](default true)', 'LOCATION[right|bottom|left|top]', 'USE_ANOTHER_LABEL', 'USE_ANOTHER_STYLE', 'COLOR') }}
 ````
 
 Create a toolbar - `toolbar_display`

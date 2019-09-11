@@ -158,6 +158,26 @@
                 <source>label.renew</source>
                 <target>Renovar</target>
             </trans-unit>
+            <trans-unit id="40">
+                <source>label.comment</source>
+                <target>Comentar</target>
+            </trans-unit>
+            <trans-unit id="41">
+                <source>label.spam</source>
+                <target>Spam</target>
+            </trans-unit>
+            <trans-unit id="42">
+                <source>label.share</source>
+                <target>Compartir</target>
+            </trans-unit>
+            <trans-unit id="43">
+                <source>label.signin</source>
+                <target>Registrarse</target>
+            </trans-unit>
+            <trans-unit id="44">
+                <source>label.home</source>
+                <target>Casa</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
