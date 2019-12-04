@@ -1,5 +1,9 @@
 # Changelog
 
+v1.10.1
+-------
+- Removed ShareButtons as availabkle dashboard (04/12/2019)
+
 v1.10
 -----
 - Added color variable for button and button_text to colorize icon and text (11/09/2019)
