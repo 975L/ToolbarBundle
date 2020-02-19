@@ -1,8 +1,12 @@
 # Changelog
 
+v1.11
+-----
+- Removed use of symplify/easy-coding-standard as abandonned (19/02/2020)
+
 v1.10.1
 -------
-- Removed ShareButtons as availabkle dashboard (04/12/2019)
+- Removed ShareButtons as available dashboard (04/12/2019)
 
 v1.10
 -----
