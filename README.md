@@ -1,5 +1,5 @@
-ToolbarBundle
-=============
+# ToolbarBundle
+
 
 ToolbarBundle does the following:
 
@@ -13,18 +13,19 @@ This Bundle relies on the use of [Bootstrap](http://getbootstrap.com/) and [Font
 
 [ToolbarBundle API documentation](https://975l.com/apidoc/c975L/ToolbarBundle.html).
 
-Bundle installation
-===================
+## Bundle installation
 
-Step 1: Download the Bundle
----------------------------
+
+### Step 1: Download the Bundle
+
 Use [Composer](https://getcomposer.org) to install the library
+
 ```bash
     composer require c975l/toolbar-bundle
 ```
 
-Step 2: Enable the Bundle
--------------------------
+### Step 2: Enable the Bundle
+
 Then, enable the bundles by adding them to the list of registered bundles in the `app/AppKernel.php` file of your project:
 
 ```php
@@ -41,30 +42,29 @@ class AppKernel extends Kernel
 }
 ```
 
-How to use
-==========
+### How to use
 
 ToolbarBundle use [Fontawesome](https://fontawesome.com) for icons so **you have to load it from your web page**. You may use [c975L/IncludeLibraryBundle](https://github.com/975L/IncludeLibraryBundle) that will allow you to simply add `{{ inc_lib('fontawesome', 'css') }}` in your layout.html.twig, but if you use [c975L/SiteBundle](https://github.com/975L/SiteBundle) it's already there in `stylesheets` section :).
 
 
-Create button - `toolbar_button()`
-----------------------------------
+### Create button - `toolbar_button()`
+
 You can create a button in a Twig template by calling the following code:
 
 ```twig
 {{ toolbar_button(path('ROUTE', { 'VARIABLE': object.PROPERTY }), 'BUTTON_NAME', 'SIZE[lg|md|sm|xs](default md)', 'USE_ANOTHER_LABEL', 'USE_ANOTHER_STYLE', 'COLOR') }}
 ````
 
-Create button with text - `toolbar_button_text()`
--------------------------------------------------
+### Create button with text - `toolbar_button_text()`
+
 You can create a button with text in a Twig template by calling the following code (data between [] are optional):
 
 ```twig
 {{ toolbar_button_text(path('ROUTE', { 'VARIABLE': object.PROPERTY }), 'BUTTON_NAME', 'SIZE[lg|md|sm|xs](default md)', 'ICON_DISPLAY[true|false](default true)', 'LOCATION[right|bottom|left|top]', 'USE_ANOTHER_LABEL', 'USE_ANOTHER_STYLE', 'COLOR') }}
 ````
 
-Create a toolbar - `toolbar_display`
-------------------------------------
+### Create a toolbar - `toolbar_display`
+
 To create a toolbar, you need to create a template where the tools are defined. Inside this template you can use the Twig Extension `toolbar_button()` or `toolbar_button_text()` to define buttons, like in the following:
 
 ```twig
@@ -75,9 +75,11 @@ To create a toolbar, you need to create a template where the tools are defined. 
         {{ toolbar_button_text(path('ROUTE', { 'VARIABLE': object.PROPERTY }), 'BUTTON_NAME', 'SIZE[lg|md|sm|xs](default md)', 'ICON_DISPLAY[true|false](default true)', 'LOCATION[right|bottom|left|top]') }}
     {% endif %}
 ```
+
 Then in your templates simply call the Twig extension `{{ toolbar_display('TOOLS_TEMPLATE', 'TYPE', 'SIZE[lg|md|sm|xs]', OBJECT_IF_NEEDED, 'ALIGNMENT[left|center|right](default center)') }}`.
 
 You can also specify a css style in your stylesheet for the toolbar:
+
 ```css
 .toolbar {
     margin-bottom: 2em;
@@ -86,9 +88,10 @@ You can also specify a css style in your stylesheet for the toolbar:
 
 **Note** that the Twig extension `ToolbarDashboards` is specific to 975L developed products, as it will display a dropdown menu link to other products.
 
-Call from Controller
---------------------
+### Call from Controller
+
 If you need to call it from a controller, you can do it with the following code:
+
 ```php
 <?php
 //...
@@ -103,4 +106,4 @@ If you need to call it from a controller, you can do it with the following code:
     ));
 ```
 
-**If this project help you to reduce time to develop, you can [buy me a coffee](https://www.buymeacoffee.com/LaurentMarquet) :)**
+If this project **help you to reduce time to develop**, you can sponsor me via the "Sponsor" button at the top :)

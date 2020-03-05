@@ -40,16 +40,20 @@ class ToolbarDisplay extends AbstractExtension
     public function display(Environment $environment, $template, $type = null, $size = 'md', $object = null, $alignment = 'center')
     {
         //Defines tools
-        $tools = $environment->render($template, array(
+        $tools = $environment->render(
+            $template,
+            array(
                 'type' => $type,
                 'object' => $object,
             ));
 
         //Defines toolbar
-        return $environment->render('@c975LToolbar/toolbar.html.twig', array(
-            'alignment' => $alignment,
-            'tools' => $tools,
-            'size' => $size,
-        ));
+        return $environment->render(
+            '@c975LToolbar/toolbar.html.twig',
+            array(
+                'alignment' => $alignment,
+                'tools' => $tools,
+                'size' => $size,
+            ));
     }
 }

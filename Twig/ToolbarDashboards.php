@@ -92,9 +92,11 @@ class ToolbarDashboards extends AbstractExtension
         }
 
         //Defines toolbar
-        return $environment->render('@c975LToolbar/dashboards.html.twig', array(
-            'dashboards' => $dashboards,
-            'size' => $size,
-        ));
+        return $environment->render(
+            '@c975LToolbar/dashboards.html.twig',
+            array(
+                'dashboards' => $dashboards,
+                'size' => $size,
+            ));
     }
 }
