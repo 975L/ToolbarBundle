@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.12.2
+
+- Replaced `kernel.root_dir` by `kernel.project_dir` (03/09/2021)
+
 ## v1.12.1
 
 - Removed twig/extensions in composer (03/09/2021)
