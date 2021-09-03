@@ -1,6 +1,5 @@
 # ToolbarBundle
 
-
 ToolbarBundle does the following:
 
 - Displays a toolbar,
@@ -14,7 +13,6 @@ This Bundle relies on the use of [Bootstrap](http://getbootstrap.com/) and [Font
 [ToolbarBundle API documentation](https://975l.com/apidoc/c975L/ToolbarBundle.html).
 
 ## Bundle installation
-
 
 ### Step 1: Download the Bundle
 
@@ -45,7 +43,6 @@ class AppKernel extends Kernel
 ### How to use
 
 ToolbarBundle use [Fontawesome](https://fontawesome.com) for icons so **you have to load it from your web page**. You may use [c975L/IncludeLibraryBundle](https://github.com/975L/IncludeLibraryBundle) that will allow you to simply add `{{ inc_lib('fontawesome', 'css') }}` in your layout.html.twig, but if you use [c975L/SiteBundle](https://github.com/975L/SiteBundle) it's already there in `stylesheets` section :).
-
 
 ### Create button - `toolbar_button()`
 
