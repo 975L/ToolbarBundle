@@ -20,8 +20,7 @@
     "require": {
         "php": "*",
         "c975l/config-bundle": "^2",
-        "symfony/security": "*",
-        "twig/extensions": "*"
+        "symfony/security": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "*",
