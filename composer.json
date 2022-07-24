@@ -19,12 +19,10 @@
     ],
     "require": {
         "php": "*",
-        "c975l/config-bundle": "^2",
+        "c975l/config-bundle": "*",
         "symfony/security": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "*",
-        "rector/rector": "*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

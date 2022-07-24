@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.13
+
+- Changed composer version constraints (24/07/2022)
+
 ## v1.12.3
 
 - Corrected file path to check dashboards (08/10/2021)
