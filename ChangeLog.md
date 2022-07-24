@@ -1,6 +1,10 @@
 # Changelog
 
-## v1.13
+## v1.14
+
+- Removed composer require security-bundle (24/07/2022)
+
+## v1.13
 
 - Changed composer version constraints (24/07/2022)
 

@@ -19,8 +19,7 @@
     ],
     "require": {
         "php": "*",
-        "c975l/config-bundle": "*",
-        "symfony/security": "*"
+        "c975l/config-bundle": "*"
     },
     "require-dev": {
     },
