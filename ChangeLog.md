@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.14.1
+
+- Suppressed use of container (24/07/2022)
+
 ## v1.14
 
 - Removed composer require security-bundle (24/07/2022)

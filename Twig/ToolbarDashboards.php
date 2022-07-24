@@ -9,7 +9,6 @@
 
 namespace c975L\ToolbarBundle\Twig;
 
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use c975L\ConfigBundle\Service\ConfigServiceInterface;
 use Twig\Environment;
@@ -30,12 +29,6 @@ class ToolbarDashboards extends AbstractExtension
     private $configService;
 
     /**
-     * Stores ContainerInterface
-     * @var ContainerInterface
-     */
-    private $container;
-
-    /**
      * Stores TokenStorageInterface
      * @var TokenStorageInterface
      */
@@ -43,12 +36,10 @@ class ToolbarDashboards extends AbstractExtension
 
     public function __construct(
         ConfigServiceInterface $configService,
-        ContainerInterface $container,
         TokenStorageInterface $tokenStorage
     )
     {
         $this->configService = $configService;
-        $this->container = $container;
         $this->tokenStorage = $tokenStorage;
     }
 
