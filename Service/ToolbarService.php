@@ -23,7 +23,7 @@ class ToolbarService implements ToolbarServiceInterface
      */
     public function defineButton(string $button)
     {
-        $buttons = array(
+        $buttons = [
             'add_role' => array(
                 'icon' => 'fas fa-user-check',
                 'style' => 'btn-info',
@@ -168,8 +168,8 @@ class ToolbarService implements ToolbarServiceInterface
                 'icon' => 'fas fa-star',
                 'style' => 'btn-default',
             ),
-        );
+        ];
 
-        return isset($buttons[$button]) ? $buttons[$button] : null;
+        return $buttons[$button] ?? null;
     }
 }

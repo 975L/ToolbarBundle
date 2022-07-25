@@ -22,39 +22,26 @@ use Twig\TwigFunction;
  */
 class ToolbarDashboards extends AbstractExtension
 {
-    /**
-     * Stores ConfigServiceInterface
-     * @var ConfigServiceInterface
-     */
-    private $configService;
-
-    /**
-     * Stores TokenStorageInterface
-     * @var TokenStorageInterface
-     */
-    private $tokenStorage;
-
     public function __construct(
-        ConfigServiceInterface $configService,
-        TokenStorageInterface $tokenStorage
+        /**
+         * Stores ConfigServiceInterface
+         */
+        private readonly ConfigServiceInterface $configService,
+        /**
+         * Stores TokenStorageInterface
+         */
+        private readonly TokenStorageInterface $tokenStorage
     )
     {
-        $this->configService = $configService;
-        $this->tokenStorage = $tokenStorage;
     }
 
     public function getFunctions()
     {
-        return array(
-            new TwigFunction(
-                'toolbar_dashboards',
-                array($this, 'dashboards'),
-                array(
-                    'needs_environment' => true,
-                    'is_safe' => array('html'),
-                )
-            ),
-        );
+        return [new TwigFunction(
+            'toolbar_dashboards',
+            $this->dashboards(...),
+            ['needs_environment' => true, 'is_safe' => ['html']]
+        )];
     }
 
     /**
@@ -67,7 +54,7 @@ class ToolbarDashboards extends AbstractExtension
         $dashboards = null;
         if ($this->tokenStorage->getToken()->getUser() !== null) {
             //Defines installed dashboards
-            $dashboardsAvailable = array('ContactForm', 'Email', 'Events', 'ExceptionChecker', 'GiftVoucher', 'PageEdit', 'Payment', 'PurchaseCredits', 'Site', 'User');
+            $dashboardsAvailable = ['ContactForm', 'Email', 'Events', 'ExceptionChecker', 'GiftVoucher', 'PageEdit', 'Payment', 'PurchaseCredits', 'Site', 'User'];
             foreach ($dashboardsAvailable as $dashboardAvailable) {
                 //Checks if the bundle is installed
                 if (is_dir($this->configService->getContainerParameter('kernel.project_dir') . '/vendor/c975l/' . strtolower($dashboardAvailable) . '-bundle') &&
@@ -85,9 +72,6 @@ class ToolbarDashboards extends AbstractExtension
         //Defines toolbar
         return $environment->render(
             '@c975LToolbar/dashboards.html.twig',
-            array(
-                'dashboards' => $dashboards,
-                'size' => $size,
-            ));
+            ['dashboards' => $dashboards, 'size' => $size]);
     }
 }

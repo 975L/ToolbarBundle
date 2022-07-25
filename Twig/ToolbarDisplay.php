@@ -21,16 +21,11 @@ class ToolbarDisplay extends AbstractExtension
 {
     public function getFunctions()
     {
-        return array(
-            new TwigFunction(
-                'toolbar_display',
-                array($this, 'display'),
-                array(
-                    'needs_environment' => true,
-                    'is_safe' => array('html'),
-                )
-            ),
-        );
+        return [new TwigFunction(
+            'toolbar_display',
+            $this->display(...),
+            ['needs_environment' => true, 'is_safe' => ['html']]
+        )];
     }
 
     /**
@@ -42,18 +37,11 @@ class ToolbarDisplay extends AbstractExtension
         //Defines tools
         $tools = $environment->render(
             $template,
-            array(
-                'type' => $type,
-                'object' => $object,
-            ));
+            ['type' => $type, 'object' => $object]);
 
         //Defines toolbar
         return $environment->render(
             '@c975LToolbar/toolbar.html.twig',
-            array(
-                'alignment' => $alignment,
-                'tools' => $tools,
-                'size' => $size,
-            ));
+            ['alignment' => $alignment, 'tools' => $tools, 'size' => $size]);
     }
 }

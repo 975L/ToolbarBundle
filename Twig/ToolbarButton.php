@@ -21,29 +21,22 @@ use Twig\TwigFunction;
  */
 class ToolbarButton extends AbstractExtension
 {
-    /**
-     * Stores the toolbarService
-     * @var ToolbarServiceInterface
-     */
-    private $toolbarService;
-
-    public function __construct(ToolbarServiceInterface $toolbarService)
+    public function __construct(
+        /**
+         * Stores the toolbarService
+         */
+        private readonly ToolbarServiceInterface $toolbarService
+    )
     {
-        $this->toolbarService = $toolbarService;
     }
 
     public function getFunctions()
     {
-        return array(
-            new TwigFunction(
-                'toolbar_button',
-                array($this, 'button'),
-                array(
-                    'needs_environment' => true,
-                    'is_safe' => array('html'),
-                )
-            ),
-        );
+        return [new TwigFunction(
+            'toolbar_button',
+            $this->button(...),
+            ['needs_environment' => true, 'is_safe' => ['html']]
+        )];
     }
 
     /**
@@ -54,14 +47,6 @@ class ToolbarButton extends AbstractExtension
     {
         $buttonData = $this->toolbarService->defineButton($button);
 
-        return $environment->render('@c975LToolbar/button.html.twig', array(
-            'link' => $link,
-            'style' => null !== $userStyle ? $userStyle : $buttonData['style'],
-            'color' => $color,
-            'size' => null === $size ? 'md' : $size,
-            'button' => $button,
-            'icon' => $buttonData['icon'],
-            'label' => $label,
-        ));
+        return $environment->render('@c975LToolbar/button.html.twig', ['link' => $link, 'style' => $userStyle ?? $buttonData['style'], 'color' => $color, 'size' => $size ?? 'md', 'button' => $button, 'icon' => $buttonData['icon'], 'label' => $label]);
     }
 }
