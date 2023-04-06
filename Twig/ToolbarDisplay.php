@@ -19,7 +19,7 @@ use Twig\TwigFunction;
  */
 class ToolbarDisplay extends AbstractExtension
 {
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [new TwigFunction(
             'toolbar_display',
