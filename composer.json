@@ -27,7 +27,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "c975L\\ToolbarBundle\\": src/"
+            "c975L\\ToolbarBundle\\": "src/"
         }
     },
     "config": {
