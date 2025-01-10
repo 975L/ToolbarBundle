@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.0.2
+
+- Removed use of spaceless as deprecated (10/01/2025)
+
 ## v3.0.1
 
 - Corrected composer.json (22/01/2024)

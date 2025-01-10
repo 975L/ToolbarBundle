@@ -7,10 +7,8 @@
     {% set size = 'md' %}
 {% endif %}
 
-{% apply spaceless %}
 <div class="text-{{ alignment }} toolbar">
     <div class="btn-group btn-group-{{ size }}" role="group">
         {{ tools|raw }}
     </div>
 </div>
-{% endapply %}
