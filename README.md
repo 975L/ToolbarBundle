@@ -42,7 +42,7 @@ class AppKernel extends Kernel
 
 ### How to use
 
-ToolbarBundle use [Fontawesome](https://fontawesome.com) for icons so **you have to load it from your web page**. You may use [c975L/IncludeLibraryBundle](https://github.com/975L/IncludeLibraryBundle) that will allow you to simply add `{{ inc_lib('fontawesome', 'css') }}` in your layout.html.twig, but if you use [c975L/SiteBundle](https://github.com/975L/SiteBundle) it's already there in `stylesheets` section :).
+ToolbarBundle use [Fontawesome](https://fontawesome.com) for icons so **you have to load it from your web page**.
 
 ### Create button - `toolbar_button()`
 

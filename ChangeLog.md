@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.0.3
+
+- Removed use of`c975L/IncludeLibraryBundle` (09/03/2025)
+
 ## v3.0.2
 
 - Removed use of spaceless as deprecated (10/01/2025)
