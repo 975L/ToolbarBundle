@@ -1,5 +1,7 @@
 # ToolbarBundle
 
+**[This bundle is now DEPRECATED**
+
 ToolbarBundle does the following:
 
 - Displays a toolbar,

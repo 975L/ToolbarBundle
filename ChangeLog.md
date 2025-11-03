@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.1
+
+- Marked the bundle as DEPRECATED (03/11/2025)
+
 ## v3.0.3
 
 - Removed use of`c975L/IncludeLibraryBundle` (09/03/2025)
